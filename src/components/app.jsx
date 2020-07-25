@@ -1,11 +1,15 @@
 import React from 'react';
-import { render } from 'react-dom/cjs/react-dom.development';
+import MoonLight from './moon-light';
+import NavBar from './navbar'
 
 export default class App extends React.Component {
 
   render() {
     return (
-      <h1>Test</h1>
+      <div>
+        <NavBar />
+        {/* <MoonLight /> */}
+      </div>
     )
   }
 }
