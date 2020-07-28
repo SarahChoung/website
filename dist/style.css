@@ -5,20 +5,25 @@
 }
 
 .section {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 10vh;
 }
 
-#about {
-  margin-top: 10vh;
+#home {
+  height: 90vh;
 }
 
 #about,
 #skills,
 #contact {
   background-color: lightslategray;
+}
+
+#header-placeholder {
+  height: 10vh;
 }
 
 #header-container {
@@ -35,9 +40,18 @@ header {
   cursor: pointer;
 }
 
+#nav-sections li {
+  list-style: none;
+  color: black;
+}
+
+#nav-sections li > a {
+  color: black;
+}
+
 /* Moonlight Code */
 
-#moonlight-div {
+/* #moonlight-div {
   height: 120vh;
   background: #0a2a43;
 }
@@ -93,4 +107,4 @@ section img {
 
 #road {
   z-index: 2;
-}
+} */

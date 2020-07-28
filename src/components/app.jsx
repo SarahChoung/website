@@ -1,5 +1,6 @@
 import React from 'react';
 import MoonLight from './moon-light';
+import Home from './home';
 import NavBar from './navbar';
 import About from './about';
 import Applications from './applications';
@@ -13,6 +14,7 @@ export default class App extends React.Component {
     return (
       <div>
         <NavBar />
+        <Home />
         <About />
         <Applications />
         <Skills />
