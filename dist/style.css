@@ -6,9 +6,6 @@
 
 .section {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding-top: 10vh;
 }
 
@@ -47,6 +44,10 @@ header {
 
 #nav-sections li > a {
   color: black;
+}
+
+.react:hover {
+  fill: black;
 }
 
 /* Moonlight Code */

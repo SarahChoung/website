@@ -5,7 +5,7 @@ export default class NavBar extends React.Component {
     return (
       <div id="#top">
         <div id="header-placeholder">&nbsp;</div>
-        <div id="header-container" class="fixed-top">
+        <div id="header-container" className="fixed-top">
           <header className="d-flex justify-content-between m-auto align-items-end p-2">
             <div>
               <h1 className="m-0">Placeholder</h1>
