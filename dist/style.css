@@ -1,6 +1,24 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.section {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about {
+  margin-top: 10vh;
+}
+
+#about,
+#skills,
+#contact {
+  background-color: lightslategray;
 }
 
 #header-container {
@@ -9,12 +27,15 @@
 
 header {
   width: 90%;
+  height: 10vh;
 }
 
 #nav-sections h5 {
   margin: 0;
   cursor: pointer;
 }
+
+/* Moonlight Code */
 
 #moonlight-div {
   height: 120vh;
