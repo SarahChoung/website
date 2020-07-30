@@ -13,7 +13,14 @@ export default function About(props) {
           </div>
           <div className="col col-lg-6">
             <h3>Hi, I'm Sarah</h3>
-            <p>About me blurb. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptas, rem id, eaque unde ducimus vero iure commodi numquam itaque aliquam similique quae dolorum quo. Perspiciatis et repellat aliquam eligendi?</p>
+            <p className="text-left">About me blurb. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptas, rem id, eaque unde ducimus vero iure commodi numquam itaque aliquam similique quae dolorum quo. Perspiciatis et repellat aliquam eligendi?</p>
+            <div>
+              <i className="fa fa-lg fa-envelope"></i>
+              <i className="fa fa-lg fa-phone"></i>
+              <i className="fa fa-lg fa-file"></i>
+              <i className="fab fa-lg fa-github"></i>
+              <i className="fab fa-lg fa-linkedin"></i>
+            </div>
           </div>
         </div>
       </div>
