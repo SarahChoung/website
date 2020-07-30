@@ -16,7 +16,7 @@
 #about,
 #skills,
 #contact {
-  background-color: lightslategray;
+  background-color: linen;
 }
 
 #header-placeholder {
@@ -42,28 +42,8 @@ header {
   color: black;
 }
 
-#nav-sections li > a {
+a {
   color: black;
-}
-
-.react:hover {
-  fill: black;
-}
-
-.st0 {
-  fill: #0acf83;
-}
-.st1 {
-  fill: #a259ff;
-}
-.st2 {
-  fill: #f24e1e;
-}
-.st3 {
-  fill: #ff7262;
-}
-.st4 {
-  fill: #1abcfe;
 }
 
 /* Moonlight Code */
