@@ -46,6 +46,17 @@ a {
   color: black;
 }
 
+.app-card {
+  max-height: 500px;
+}
+
+.app-image {
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
 /* Moonlight Code */
 
 /* #moonlight-div {

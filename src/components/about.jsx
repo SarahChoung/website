@@ -6,7 +6,7 @@ export default function About(props) {
       <div className="pb-5">
         <h1>About Me</h1>
       </div>
-      <div className="d-flex justify-content-center w-75 m-auto">
+      <div className="container">
         <div className="row">
           <div className="col col-lg-6 mb-5">
             <img src="/images/profile-photo.jpg" alt="profile picture"></img>
