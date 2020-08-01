@@ -29,7 +29,7 @@ export default class MoonLight extends React.Component {
     return (
       <div id="moonlight-div" ref={this.myRef}>
         <section id="moonlight">
-          <img src="images/bg.jpg" id="bg" style={{ top: `${scrollY * 0.5}px` }} />
+          <img src="images/bg.jpg" id="bg" />
           <img src="images/moon.png" id="moon" style={{ left: `-${scrollY * 1}px` }} />
           <img src="images/mountain.png" id="mountain" style={{ top: `-${scrollY * 0.15}px` }} />
           <img src="images/road.png" id="road" style={{ top: `${scrollY * 0.15}px` }} />
