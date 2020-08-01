@@ -17,7 +17,7 @@ export default class App extends React.Component {
         <Home />
         <About />
         <Applications />
-        <MoonLight />
+        {/* <MoonLight /> */}
         <Skills />
         <Tools />
         <Contact />

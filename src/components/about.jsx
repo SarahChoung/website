@@ -8,10 +8,10 @@ export default function About(props) {
       </div>
       <div className="container">
         <div className="row">
-          <div className="col col-lg-6 mb-5">
-            <img src="/images/profile-photo.jpg" alt="profile picture"></img>
+          <div className="col-12 col-md-6 mb-5">
+            <img className="w-100" src="/images/profile-photo.jpg" alt="profile picture"></img>
           </div>
-          <div className="col col-lg-6">
+          <div className="col-12 col-md-6">
             <h3>Hi, I'm Sarah</h3>
             <p className="text-left">About me blurb. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptas, rem id, eaque unde ducimus vero iure commodi numquam itaque aliquam similique quae dolorum quo. Perspiciatis et repellat aliquam eligendi?</p>
             <div className="d-flex justify-content-around w-50 m-auto">

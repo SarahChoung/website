@@ -6,7 +6,7 @@ export default function Applications(props) {
       <h1>Applications</h1>
       <div className="container p-3">
         <div className="row">
-          <div className="col-4 app-card">
+          <div className="col-12 col-md-4 app-card">
             <img className="app-image" src="/images/art4bid.png" alt="art4bid app"></img>
             <div className="w-100 d-flex flex-wrap pt-1">
               <span className="badge badge-pill badge-secondary">{`JavaScript (ES5/ES6)`}</span>
@@ -19,7 +19,7 @@ export default function Applications(props) {
               <span className="badge badge-pill badge-secondary">Bootstrap 4</span>
             </div>
           </div>
-          <div className="col-4 app-card">
+          <div className="col-12 col-md-4 app-card">
             <img className="app-image" src="/images/light-box.png" alt="light-box app"></img>
             <div className="w-100 d-flex flex-wrap pt-1">
               <span className="badge badge-pill badge-secondary">{`JavaScript (ES5/ES6)`}</span>
@@ -31,7 +31,7 @@ export default function Applications(props) {
               <span className="badge badge-pill badge-secondary">Bootstrap 4</span>
             </div>
           </div>
-          <div className="col-4 app-card">
+          <div className="col-12 col-md-4 app-card">
             <img className="app-image" src="/images/movies-to-see.png" alt="movies-to-see app"></img>
             <div className="w-100 d-flex flex-wrap pt-1">
               <span className="badge badge-pill badge-secondary">{`JavaScript (ES5/ES6)`}</span>
