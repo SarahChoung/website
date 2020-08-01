@@ -9,7 +9,7 @@ export default function Applications(props) {
           <div className="col-4 app-card">
             <img className="app-image" src="/images/art4bid.png" alt="art4bid app"></img>
             <div className="w-100 d-flex flex-wrap pt-1">
-              <span class="badge badge-pill badge-secondary">{`JavaScript (ES5/ES6)`}</span>
+              <span className="badge badge-pill badge-secondary">{`JavaScript (ES5/ES6)`}</span>
               <span className="badge badge-pill badge-secondary">React.js</span>
               <span className="badge badge-pill badge-secondary">Node.js</span>
               <span className="badge badge-pill badge-secondary">HTML5</span>
