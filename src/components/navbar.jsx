@@ -3,7 +3,7 @@ import React from 'react'
 export default class NavBar extends React.Component {
   render() {
     return (
-      <div id="#top" className="d-none">
+      <div id="#top">
         <div id="header-placeholder">&nbsp;</div>
         <div id="header-container" className="fixed-top">
           <header className="d-flex justify-content-between m-auto align-items-end p-2">
