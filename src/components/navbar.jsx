@@ -1,31 +1,53 @@
 import React from 'react'
 
 export default class NavBar extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      active: false
+    }
+    this.toggleNav = this.toggleNav.bind(this)
+  }
+
+  toggleNav(event) {
+    if (!this.state.active) {
+      this.setState({ active: true })
+    } else {
+      this.setState({ active: false })
+    }
+
+  }
+
   render() {
+    let isActive = null;
+    let toggle = null;
+    if (this.state.active) {
+      isActive = 'nav-active'
+      toggle = 'toggle'
+    }
     return (
       <div id="#top">
         <div id="header-placeholder">&nbsp;</div>
-        <div id="header-container" className="fixed-top">
-          <nav className="header navbar navbar-expand-lg navbar-light d-flex justify-content-between m-auto p-2">
-            <div>
-              <a class="navbar-brand" href="#">Placeholder</a>
+        <nav id="header-container" className="fixed-top">
+          <div className="header d-flex justify-content-between align-items-center m-auto p-2">
+            <h2 className="m-0">Placeholder</h2>
+            <ul className={`nav-links d-flex align-items-center justify-content-around m-0 ${isActive}`}>
+              <li><a href="#top" onClick={this.toggleNav}>Home</a></li>
+              <li><a href="#about" onClick={this.toggleNav}>About</a></li>
+              <li><a href="#applications" onClick={this.toggleNav}>Applications</a></li>
+              <li><a href="#skills" onClick={this.toggleNav}>Skills</a></li>
+              <li><a href="#tools" onClick={this.toggleNav}>Tools</a></li>
+              <li><a href="#contact" onClick={this.toggleNav}>Contact</a></li>
+            </ul>
+            <div className="burger" onClick={this.toggleNav} >
+              <div className={`${toggle} line1`}></div>
+              <div className={`${toggle} line2`}></div>
+              <div className={`${toggle} line3`}></div>
             </div>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" href="#">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse mr-auto" id="navbarNav">
-              <ul className="navbar-nav" id="nav-sections">
-                <li className="nav-item active" ><a className="nav-link" href="#top">Home</a></li>
-                <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
-                <li className="nav-item"><a className="nav-link" href="#applications">Applications</a></li>
-                <li className="nav-item"><a className="nav-link" href="#skills">Skills</a></li>
-                <li className="nav-item"><a className="nav-link" href="#tools">Tools</a></li>
-                <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
-              </ul>
-            </div>
-          </nav>
-        </div >
+          </div>
+        </nav>
       </div >
+
     )
   }
 }

@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  color: black;
 }
 
 .section {
@@ -32,18 +37,59 @@
   height: 10vh;
 }
 
-#nav-sections h5 {
-  margin: 0;
-  cursor: pointer;
+.nav-links {
+  width: 50%;
 }
 
-#nav-sections li {
+.nav-links li {
   list-style: none;
   color: black;
 }
 
-a {
-  color: black;
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.toggle.line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle.line2 {
+  opacity: 0;
+}
+
+.toggle.line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+@media screen and (max-width: 992px) {
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 90vh;
+    top: 10vh;
+    background-color: lightblue;
+    flex-direction: column;
+    width: 30%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
 }
 
 .app-card {
