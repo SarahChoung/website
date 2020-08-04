@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default class NavBar extends React.Component {
   constructor(props) {
@@ -26,11 +26,11 @@ export default class NavBar extends React.Component {
       toggle = 'toggle'
     }
     return (
-      <div id="#top">
+      <div className="#top">
         <div id="header-placeholder">&nbsp;</div>
         <nav id="header-container" className="fixed-top">
           <div className="header d-flex justify-content-between align-items-center m-auto p-2">
-            <h2 className="m-0">Placeholder</h2>
+            <a href="#top"><h2 className="m-0">Placeholder</h2></a>
             <ul className={`nav-links d-flex align-items-center justify-content-around m-0 ${isActive}`}>
               <li><a href="#top" onClick={this.toggleNav}>Home</a></li>
               <li><a href="#about" onClick={this.toggleNav}>About</a></li>
