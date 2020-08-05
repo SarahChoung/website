@@ -101,14 +101,14 @@ a:hover {
 }
 
 .app-card {
-  max-height: 500px;
+  padding: 5px;
+  max-height: 550px;
 }
 
 .app-image {
-  height: 90%;
+  height: 80%;
   width: 100%;
-  object-fit: cover;
-  object-position: top;
+  object-fit: contain;
 }
 
 .badge-class {

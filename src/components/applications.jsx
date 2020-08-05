@@ -7,7 +7,8 @@ export default function Applications(props) {
       <div className="container p-3">
         <div className="row">
           <div className="col-12 col-md-4 app-card">
-            <img className="app-image" src="/images/art4bid.png" alt="art4bid app"></img>
+            <h2>ART4BID</h2>
+            <img className="app-image" src="/images/art4bid2.png" alt="art4bid app"></img>
             <div className="w-100 d-flex flex-wrap pt-1">
               <span className="badge-class badge badge-pill badge-dark">{`JavaScript (ES5/ES6)`}</span>
               <span className="badge-class badge badge-pill badge-dark">React.js</span>
@@ -20,7 +21,8 @@ export default function Applications(props) {
             </div>
           </div>
           <div className="col-12 col-md-4 app-card">
-            <img className="app-image" src="/images/light-box.png" alt="dark-box app"></img>
+            <h2>Light Box</h2>
+            <img className="app-image" src="/images/light-box2.png" alt="dark-box app"></img>
             <div className="w-100 d-flex flex-wrap pt-1">
               <span className="badge-class badge badge-pill badge-dark">{`JavaScript (ES5/ES6)`}</span>
               <span className="badge-class badge badge-pill badge-dark">React.js</span>
@@ -32,7 +34,8 @@ export default function Applications(props) {
             </div>
           </div>
           <div className="col-12 col-md-4 app-card">
-            <img className="app-image" src="/images/movies-to-see.png" alt="movies-to-see app"></img>
+            <h2>Movies To See</h2>
+            <img className="app-image" src="/images/movies-to-see2.png" alt="movies-to-see app"></img>
             <div className="w-100 d-flex flex-wrap pt-1">
               <span className="badge-class  badge badge-pill badge-dark">{`JavaScript (ES5/ES6)`}</span>
               <span className="badge-class badge badge-pill badge-dark">HTML5</span>
