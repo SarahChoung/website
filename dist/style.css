@@ -127,7 +127,7 @@ a:hover {
 
 /* Moonlight Code */
 
-#moonlight-div {
+/* #moonlight-div {
   height: 120vh;
   background: #0a2a43;
 }
@@ -184,3 +184,38 @@ section img {
 #road {
   z-index: 2;
 }
+
+#logo path:nth-child(2) {
+  stroke-dasharray: 700px;
+}
+
+#logo path:nth-child(3) {
+  stroke-dasharray: 200px;
+}
+
+#logo path:nth-child(4) {
+}
+
+#logo path:nth-child(5) {
+}
+
+#logo path:nth-child(6) {
+}
+
+#logo path:nth-child(7) {
+}
+
+#logo path:nth-child(8) {
+}
+
+#logo path:nth-child(9) {
+}
+
+#logo path:nth-child(10) {
+}
+
+#logo path:nth-child(11) {
+}
+
+#logo path:nth-child(12) {
+} */
