@@ -4,10 +4,15 @@ export default class Applications extends React.Component {
   constructor(props) {
     super(props);
     this.rotateCard = this.rotateCard.bind(this);
+    this.rotateCardBack = this.rotateCardBack.bind(this);
   }
 
   rotateCard(event) {
     event.target.parentElement.parentElement.parentElement.classList.toggle('flip-card')
+  }
+
+  rotateCardBack(event) {
+    event.target.parentElement.parentElement.classList.toggle('flip-card')
   }
 
   render() {
@@ -19,7 +24,7 @@ export default class Applications extends React.Component {
             <div className="col-12 col-md-4 app-container">
               <div className="app-card">
                 <img className="app-image" src="/images/art4bid-app.png" alt="art4bid app"></img>
-                <div className="buttons-container w-100 d-flex flex-wrap p-1 justify-content-between">
+                <div className="w-100 d-flex flex-wrap p-1 justify-content-between">
                   <button
                     onClick={this.rotateCard}
                     className="more-info">More Info</button>
@@ -42,7 +47,7 @@ export default class Applications extends React.Component {
               <div className="app-card">
                 <div className="card-front">
                   <img className="app-image" src="/images/light-box-app-3.png" alt="dark-box app"></img>
-                  <div className="w-100 d-flex flex-wrap p-1 justify-content-between">
+                  <div className="buttons-container w-100 d-flex flex-wrap pt-1 pr-1 pl-1 justify-content-between">
                     <button
                       onClick={this.rotateCard}
                       className="more-info">More Info</button>
@@ -60,6 +65,9 @@ export default class Applications extends React.Component {
                     <span className="badge-class badge badge-pill badge-dark">Express</span>
                     <span className="badge-class badge badge-pill badge-dark">Bootstrap 4</span>
                   </div>
+                  <button
+                    onClick={this.rotateCardBack}
+                  >Go Back</button>
                 </div>
               </div>
             </div>
