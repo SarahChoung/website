@@ -17,7 +17,7 @@ export default function About(props) {
 
               While my background is in research and health care, software played a crucial role in my previous positions. Having to use 3D-image analysis software and Electronic Health Record systems daily made me curious as to how computer programs like these were made.<br /><br />
 
-              As I began learning HTML, CSS, and JavaScript using different online resources and taking part-time classes, I realized how much I enjoyed coding and wanted to pursue it as a career. Fast forward and after completing a full-time coding bootcamp at LearningFuze, I was able to add React.js, Node.js, PostgreSQL, jQuery, RESTful APIs, OOP, and Express to my skillset<br /><br />
+              As I began learning HTML, CSS, and JavaScript using different online resources and taking part-time classes, I realized how much I enjoyed coding and wanted to pursue it as a career. Fast forward and after completing a full-time coding bootcamp at LearningFuze, I was able to add React.js, Node.js, PostgreSQL, jQuery, RESTful APIs, OOP, and Express to my skillset.<br /><br />
 
               Learning how to create front end and full stack applications has been an incredibly fun and educational journey. Bootcamp may have ended, but my drive to learn new technologies and methodologies has not, and I hope to have the opportunity to contribute my programming knowledge and experience to your team. </p>
             <div className="d-flex justify-content-around w-75 m-auto">
