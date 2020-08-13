@@ -278,6 +278,8 @@ section img {
 
 #logo {
   overflow: visible;
+  position: absolute;
+  top: 35%;
 }
 
 @keyframes line-anim {
@@ -292,5 +294,23 @@ section img {
   }
   to {
     fill: black;
+  }
+}
+
+#home-description {
+  font-size: 5rem;
+  top: 60%;
+  animation: description 2s;
+  position: absolute;
+}
+
+@keyframes description {
+  from {
+    top: 40%;
+    opacity: 0;
+  }
+  to {
+    top: 60%;
+    opacity: 1;
   }
 }
