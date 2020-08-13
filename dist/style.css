@@ -318,6 +318,12 @@ section img {
   }
 }
 
+.more-info:hover,
+.live-site:hover,
+.github:hover {
+  cursor: pointer;
+}
+
 .more-info {
   border: 1px solid rgb(80, 107, 198);
   border-radius: 5px;
