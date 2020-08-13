@@ -110,8 +110,15 @@ a:hover {
   transition: transform 1s;
   position: relative;
   width: 100%;
-  height: 100%;
   transform-style: preserve-3d;
+  margin: 0 1% 3%;
+  max-width: 500px;
+}
+
+.app-card:before {
+  content: "";
+  float: left;
+  padding-top: 100%;
 }
 
 .flip-card {
@@ -220,7 +227,7 @@ section img {
 */
 
 #logo {
-  animation: fill 0.5s ease forwards 3s;
+  animation: fill 0.5s ease forwards 2.5s;
 }
 
 /* S */
@@ -259,7 +266,7 @@ section img {
   stroke-dasharray: 534.5280151367188px;
   stroke-dashoffset: 534.5280151367188px;
   stroke-linecap: square;
-  animation: line-anim 2s ease forwards 0.8s;
+  animation: line-anim 2s ease forwards 0.2s;
 }
 
 /* C */
@@ -289,7 +296,7 @@ section img {
   stroke-dasharray: 483.89300537109375px;
   stroke-dashoffset: 483.89300537109375px;
   stroke-linecap: square;
-  animation: line-anim 2s ease forwards 0.6s;
+  animation: line-anim 2s ease forwards 0.4s;
 }
 
 /* N */
@@ -297,7 +304,7 @@ section img {
   stroke-dasharray: 604.4927978515625px;
   stroke-dashoffset: 604.4927978515625px;
   stroke-linecap: square;
-  animation: line-anim 2s ease forwards 0.8s;
+  animation: line-anim 2s ease forwards 0.2s;
 }
 
 /* G */
@@ -305,13 +312,13 @@ section img {
   stroke-dasharray: 635.7110595703125px;
   stroke-dashoffset: 635.7110595703125px;
   stroke-linecap: round;
-  animation: line-anim 2s ease forwards 1s;
+  animation: line-anim 2.5s ease forwards;
 }
 
 #logo {
   overflow: visible;
   position: absolute;
-  top: 35%;
+  top: 33%;
 }
 
 @keyframes line-anim {
@@ -331,7 +338,7 @@ section img {
 
 #home-description {
   font-size: 5rem;
-  top: 60%;
+  top: 55%;
   animation: description 2s;
   position: absolute;
 }
@@ -342,20 +349,22 @@ section img {
     opacity: 0;
   }
   to {
-    top: 60%;
+    top: 55%;
     opacity: 1;
   }
 }
 
 .more-info:hover,
 .live-site:hover,
-.github:hover {
+.github:hover,
+.go-back:hover {
   cursor: pointer;
 }
 
 .more-info,
 .live-site,
-.github {
+.github,
+.go-back {
   border: 1px solid rgb(80, 107, 198);
   border-radius: 5px;
   background: transparent;
@@ -364,10 +373,11 @@ section img {
   color: rgb(80, 107, 198);
   transition: 0.5s;
   font-weight: 100;
-  width: 30%;
+  width: 32%;
   height: 100%;
 }
 
 .buttons-container {
-  height: 15%;
+  height: 11%;
+  margin-top: 2.5%;
 }
