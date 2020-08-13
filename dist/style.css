@@ -100,18 +100,47 @@ a:hover {
   transform: translateX(0%);
 }
 
+.app-container {
+  perspective: 1000px;
+}
+
 .app-card {
   border-radius: 5px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-  padding: 5px;
+  transition: transform 1s;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.flip-card {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  padding: 1%;
+}
+
+.card-front {
   background-color: lightgray;
 }
 
+.card-back {
+  background-color: pink;
+  transform: rotateY(180deg);
+}
+
 .app-image {
-  height: 80%;
+  height: 86%;
   width: 100%;
-  padding: 1%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .badge-class {
@@ -324,41 +353,19 @@ section img {
   cursor: pointer;
 }
 
-.more-info {
-  border: 1px solid rgb(80, 107, 198);
-  border-radius: 5px;
-  background: transparent;
-  display: inline-block;
-  font-size: 17px;
-  padding: 8px 20px;
-  color: rgb(80, 107, 198);
-  transition: 0.5s;
-  margin: 0 2px 0;
-  font-weight: 100;
-}
-
-.live-site {
-  border: 1px solid rgb(80, 107, 198);
-  border-radius: 5px;
-  background: transparent;
-  display: inline-block;
-  font-size: 17px;
-  padding: 8px 20px;
-  color: rgb(80, 107, 198);
-  transition: 0.5s;
-  margin: 0 2px 0;
-  font-weight: 100;
-}
-
+.more-info,
+.live-site,
 .github {
   border: 1px solid rgb(80, 107, 198);
   border-radius: 5px;
   background: transparent;
   display: inline-block;
-  font-size: 17px;
-  padding: 8px 20px;
+  font-size: 16px;
+  /* padding: 8px 15px; */
   color: rgb(80, 107, 198);
   transition: 0.5s;
   margin: 0 2px 0;
   font-weight: 100;
+  width: 30%;
+  height: 100%;
 }
