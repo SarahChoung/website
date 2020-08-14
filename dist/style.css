@@ -29,7 +29,7 @@ a:hover {
 #about,
 #skills,
 #contact {
-  background-color: linen;
+  background-color: darkgrey;
 }
 
 #header-placeholder {
@@ -113,6 +113,7 @@ a:hover {
   transform-style: preserve-3d;
   margin: 0 1% 3%;
   max-width: 500px;
+  min-width: 400px;
 }
 
 .app-card:before {
@@ -132,22 +133,27 @@ a:hover {
   height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  padding: 1%;
 }
 
 .card-front {
   background-color: lightgray;
+  padding: 1%;
 }
 
 .card-back {
-  background-color: pink;
+  background-color: #333741;
   transform: rotateY(180deg);
+  padding: 8%;
 }
 
 .app-image {
   height: 85%;
   width: 100%;
   object-fit: cover;
+}
+
+.app-description {
+  height: 60%;
 }
 
 .badge-class {
@@ -365,12 +371,11 @@ section img {
 .live-site,
 .github,
 .go-back {
-  border: 1px solid rgb(80, 107, 198);
+  border: 1px solid;
   border-radius: 5px;
   background: transparent;
   display: inline-block;
   font-size: 16px;
-  color: rgb(80, 107, 198);
   transition: 0.5s;
   font-weight: 100;
   width: 32%;
@@ -380,4 +385,53 @@ section img {
 .buttons-container {
   height: 11%;
   margin-top: 2.5%;
+}
+
+.more-info,
+.go-back {
+  border-color: #de6262;
+  color: #de6262;
+}
+
+.more-info:hover,
+.go-back:hover {
+  color: white;
+  background-color: #de6262;
+}
+
+.live-site,
+.github {
+  color: rgb(80, 107, 198);
+  border-color: rgb(80, 107, 198);
+}
+
+.live-site:hover,
+.github:hover {
+  color: white;
+  background-color: rgb(80, 107, 198);
+}
+
+.pill {
+  color: white;
+  padding: 1%;
+  border-radius: 20px;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  font-size: 0.8em;
+}
+
+.app-name {
+  color: #de6262;
+}
+
+.app-blurb {
+  color: white;
+}
+
+.text-light {
+  color: white;
+}
+
+.profile-pic {
+  border-radius: 50px;
 }

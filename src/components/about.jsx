@@ -9,7 +9,7 @@ export default function About(props) {
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-5 mb-5 d-flex align-items-center">
-            <img className="w-100" src="/images/profile-photo.jpg" alt="profile picture"></img>
+            <img className="w-100 profile-pic" src="/images/profile-photo.jpg" alt="profile picture"></img>
           </div>
           <div className="col-12 col-md-7">
             <p className="text-left">

@@ -30,7 +30,7 @@ export default class NavBar extends React.Component {
         <div id="header-placeholder">&nbsp;</div>
         <nav id="header-container" className="fixed-top">
           <div className="header d-flex justify-content-between align-items-center m-auto p-2">
-            <a href="#top"><h2 className="m-0">Placeholder</h2></a>
+            <a href="#top"><h2 className="m-0">SC</h2></a>
             <ul className={`nav-links d-flex align-items-center justify-content-around m-0 ${isActive}`}>
               <li><a href="#top" onClick={this.toggleNav}>Home</a></li>
               <li><a href="#about" onClick={this.toggleNav}>About</a></li>
