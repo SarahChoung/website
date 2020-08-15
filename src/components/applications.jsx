@@ -2,7 +2,19 @@ import React from 'react'
 
 function AppCard(props) {
   const { image, rotateCard, name, description, madeWith } = props
-  const madeItems = madeWith.map((element, index) =>
+  const insertIntoArray = (arr, value) => {
+    return arr.reduce((result, element, index, array) => {
+      result.push(element);
+      if (index < array.length - 1) {
+        result.push(value);
+      }
+      return result;
+    }, []);
+  };
+
+  let result = insertIntoArray(madeWith, ' \u00B7 ')
+
+  const madeItems = result.map((element, index) =>
     (<span key={index} className="pill">{element}</span>)
   )
 
