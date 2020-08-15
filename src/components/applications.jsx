@@ -66,6 +66,12 @@ export default class Applications extends React.Component {
     return (
       <div id="applications" className="section text-center d-flex flex-column">
         <h1>Applications</h1>
+        <div className="filter-container">
+          <button className="btn">All</button>
+          <button className="btn">React.js</button>
+          <button className="btn">Node.js</button>
+          <button className="btn">PostgreSQL</button>
+        </div>
         <div className="container-fluid p-5">
           <div className="row">
             <AppCard

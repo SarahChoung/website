@@ -434,3 +434,7 @@ section img {
 #home-description {
   border-right: 0.2rem solid black;
 }
+
+.filter-container > button {
+  margin-right: 5px;
+}
