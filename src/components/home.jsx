@@ -5,10 +5,10 @@ export default class Home extends React.Component {
     super(props);
     this.state = {
       description: 'd-none',
-      text: '',
+      text: 'Web Developer',
       isDeleting: false,
       loopNum: 0,
-      typingSpeed: 150
+      typingSpeed: 3500
     }
     // this.S = React.createRef();
     // this.A = React.createRef();
@@ -19,7 +19,7 @@ export default class Home extends React.Component {
     // this.U = React.createRef();
     // this.N = React.createRef();
     // this.G = React.createRef();
-    this.words = ['Web Developer', 'Problem Solver', 'shite'];
+    this.words = ['Web Developer', 'Problem Solver', 'Always Learning'];
     this.showDescription = this.showDescription.bind(this);
     this.type = this.type.bind(this)
   }
@@ -32,18 +32,15 @@ export default class Home extends React.Component {
 
     this.setState({
       text: isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1),
-      typingSpeed: isDeleting ? 30 : 150
+      typingSpeed: isDeleting ? 30 : 100
     });
 
     if (!isDeleting && text === fullText) {
 
-      setTimeout(() => this.setState({ isDeleting: true }), 500);
+      setTimeout(() => this.setState({ isDeleting: true }), 1000);
 
     } else if (isDeleting && text === '') {
-      this.setState({
-        isDeleting: false,
-        loopNum: loopNum + 1
-      });
+      setTimeout(() => this.setState({ isDeleting: false, loopNum: loopNum + 1 }), 500);
 
     }
 
