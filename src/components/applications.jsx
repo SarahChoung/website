@@ -56,11 +56,6 @@ export default class Applications extends React.Component {
   constructor(props) {
     super(props);
     this.rotateCard = this.rotateCard.bind(this);
-    this.appCard;
-  }
-
-  appCard(props) {
-
   }
 
   rotateCard(event) {
