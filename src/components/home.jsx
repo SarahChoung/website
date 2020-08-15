@@ -4,7 +4,11 @@ export default class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      description: 'd-none'
+      description: 'd-none',
+      text: '',
+      isDeleting: false,
+      loopNum: 0,
+      typingSpeed: 150
     }
     // this.S = React.createRef();
     // this.A = React.createRef();
@@ -15,8 +19,37 @@ export default class Home extends React.Component {
     // this.U = React.createRef();
     // this.N = React.createRef();
     // this.G = React.createRef();
+    this.words = ['Web Developer', 'Problem Solver', 'shite'];
     this.showDescription = this.showDescription.bind(this);
+    this.type = this.type.bind(this)
   }
+
+
+  type() {
+    const { isDeleting, loopNum, text, typingSpeed } = this.state;
+    const i = loopNum % this.words.length;
+    const fullText = this.words[i];
+
+    this.setState({
+      text: isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1),
+      typingSpeed: isDeleting ? 30 : 150
+    });
+
+    if (!isDeleting && text === fullText) {
+
+      setTimeout(() => this.setState({ isDeleting: true }), 500);
+
+    } else if (isDeleting && text === '') {
+      this.setState({
+        isDeleting: false,
+        loopNum: loopNum + 1
+      });
+
+    }
+
+    setTimeout(this.type, typingSpeed);
+  };
+
 
   showDescription() {
     setTimeout(() => {
@@ -24,8 +57,8 @@ export default class Home extends React.Component {
     }, 3500)
   }
 
+
   componentDidMount() {
-    //eslint-disable-next-line no-console
     // console.log("S", this.S.current.getTotalLength())
     // console.log("A", this.A.current.getTotalLength())
     // console.log("R", this.R.current.getTotalLength())
@@ -36,6 +69,7 @@ export default class Home extends React.Component {
     // console.log("N", this.N.current.getTotalLength())
     // console.log("G", this.G.current.getTotalLength())
     this.showDescription()
+    this.type()
   }
   render() {
     return (
@@ -53,7 +87,7 @@ export default class Home extends React.Component {
           <path d="M1007.59 102H994.49L941.786 22.08V102H928.682V1.488H941.786L994.49 81.264V1.488H1007.59V102Z" stroke="black" strokeWidth="5" />
           <path d="M1105.96 30.72C1103.18 24.864 1099.15 20.352 1093.87 17.184C1088.59 13.92 1082.44 12.288 1075.44 12.288C1068.43 12.288 1062.09 13.92 1056.43 17.184C1050.86 20.352 1046.44 24.96 1043.18 31.008C1040.01 36.96 1038.43 43.872 1038.43 51.744C1038.43 59.616 1040.01 66.528 1043.18 72.48C1046.44 78.432 1050.86 83.04 1056.43 86.304C1062.09 89.472 1068.43 91.056 1075.44 91.056C1085.23 91.056 1093.29 88.128 1099.63 82.272C1105.96 76.416 1109.66 68.496 1110.72 58.512H1070.68V47.856H1124.68V57.936C1123.92 66.192 1121.32 73.776 1116.91 80.688C1112.49 87.504 1106.68 92.928 1099.48 96.96C1092.28 100.896 1084.27 102.864 1075.44 102.864C1066.12 102.864 1057.63 100.704 1049.95 96.384C1042.27 91.968 1036.17 85.872 1031.66 78.096C1027.24 70.32 1025.04 61.536 1025.04 51.744C1025.04 41.952 1027.24 33.168 1031.66 25.392C1036.17 17.52 1042.27 11.424 1049.95 7.104C1057.63 2.688 1066.12 0.48 1075.44 0.48C1086.09 0.48 1095.5 3.12 1103.66 8.4C1111.92 13.68 1117.92 21.12 1121.66 30.72H1105.96Z" stroke="black" strokeWidth="5" />
         </svg>
-        <span id="home-description" className={this.state.description}>Web Developer</span>
+        <span id="home-description">{this.state.text}</span>
       </div>)
   }
 }

@@ -435,3 +435,7 @@ section img {
 .profile-pic {
   border-radius: 50px;
 }
+
+#home-description {
+  border-right: 0.2rem solid black;
+}
