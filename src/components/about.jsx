@@ -8,10 +8,10 @@ export default function About(props) {
       </div>
       <div className="container">
         <div className="row">
-          <div className="col-12 col-md-5 mb-5 d-flex align-items-center">
-            <img className="w-100 profile-pic" src="/images/profile-photo.jpg" alt="profile picture"></img>
+          <div className="col-12 col-lg-6 mt-4">
+            <img className="profile-pic" src="/images/profile-photo.jpg" alt="profile picture"></img>
           </div>
-          <div className="col-12 col-md-7">
+          <div className="col-12 col-lg-6 p-3">
             <p className="text-left">
               Hi, I'm Sarah, a full stack web developer who enjoys building things, solving problems, and continuously learning.<br /><br />
 

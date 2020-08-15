@@ -434,6 +434,9 @@ section img {
 
 .profile-pic {
   border-radius: 50px;
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
 }
 
 #home-description {
