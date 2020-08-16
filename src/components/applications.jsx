@@ -43,9 +43,11 @@ function AppCard(props) {
             <h2 className="app-name">{name}</h2>
             <p className="app-blurb text-left">{description}</p>
           </div>
-          <h6 className="text-light">Made With</h6>
-          <div className="w-100 d-flex flex-wrap pt-1">
-            {madeItems}
+          <div className="made-container">
+            <h6 className="text-light">Made With</h6>
+            <div className="w-100 d-flex flex-wrap pt-1">
+              {madeItems}
+            </div>
           </div>
           <div className="buttons-container">
             <button
@@ -78,7 +80,6 @@ export default class Applications extends React.Component {
     this.setState({
       category: event.target.innerText
     })
-    console.log(event.target.innerText)
   }
 
   render() {
@@ -87,40 +88,40 @@ export default class Applications extends React.Component {
     return (
       <div id="applications" className="section text-center d-flex flex-column">
         <h1>Applications</h1>
-        <div className="filter-container mt-4" />
-        <button onClick={this.filterCards} className="btn">All</button>
-        <button onClick={this.filterCards} className="btn">React.js</button>
-        <button onClick={this.filterCards} className="btn">Node.js</button>
-        <button onClick={this.filterCards} className="btn">PostgreSQL</button>
-      </div>
-      <div className="container-fluid pt-2 pb-5">
-        <div className="d-flex flex-wrap justify-content-center">
-          <AppCard
-            category={category}
-            image="art4bid-app.png"
-            rotateCard={this.rotateCard}
-            name="ART4BID"
-            description="A full stack web application for artists who want to promote or sell their work through a social network bidding system"
-            madeWith={[`JavaScript (ES5/ES6)`, 'React.js', 'Node.js', 'HTML5', 'CSS3', 'PostgreSQL', 'Express', 'Bootstrap 4']}
-          />
-          <AppCard
-            category={category}
-            image="light-box-app-3.png"
-            rotateCard={this.rotateCard}
-            name="Light Box"
-            description="A full stack web application that allows users to shop, add desired products to a cart, and checkout items"
-            madeWith={[`JavaScript (ES5/ES6)`, 'React.js', 'Node.js', 'HTML5', 'CSS3', 'PostgreSQL', 'Express', 'Bootstrap 4']}
-          />
-          <AppCard
-            category={category}
-            image="movies-to-see-app.png"
-            rotateCard={this.rotateCard}
-            name="Movies To See"
-            description="A front end application where users can get New York Times review articles and YouTube video reviews for any movie"
-            madeWith={[`JavaScript (ES5/ES6)`, 'HTML5', 'CSS3', 'jQuery', 'AJAX', 'REST API', 'Bootstrap 4']}
-          />
+        <div className="filter-container mt-4">
+          <button onClick={this.filterCards} className="btn">All</button>
+          <button onClick={this.filterCards} className="btn">React.js</button>
+          <button onClick={this.filterCards} className="btn">Node.js</button>
+          <button onClick={this.filterCards} className="btn">PostgreSQL</button>
         </div>
-      </div>
+        <div className="container-fluid pt-2 pb-5">
+          <div className="d-flex flex-wrap justify-content-center">
+            <AppCard
+              category={category}
+              image="art4bid-app.png"
+              rotateCard={this.rotateCard}
+              name="ART4BID"
+              description="A full stack web application for artists who want to promote or sell their work through a social network bidding system"
+              madeWith={[`JavaScript (ES5/ES6)`, 'React.js', 'Node.js', 'HTML5', 'CSS3', 'PostgreSQL', 'Express', 'Bootstrap 4']}
+            />
+            <AppCard
+              category={category}
+              image="light-box-app-3.png"
+              rotateCard={this.rotateCard}
+              name="Light Box"
+              description="A full stack web application that allows users to shop, add desired products to a cart, and checkout items"
+              madeWith={[`JavaScript (ES5/ES6)`, 'React.js', 'Node.js', 'HTML5', 'CSS3', 'PostgreSQL', 'Express', 'Bootstrap 4']}
+            />
+            <AppCard
+              category={category}
+              image="movies-to-see-app.png"
+              rotateCard={this.rotateCard}
+              name="Movies To See"
+              description="A front end application where users can get New York Times review articles and YouTube video reviews for any movie"
+              madeWith={[`JavaScript (ES5/ES6)`, 'HTML5', 'CSS3', 'jQuery', 'AJAX', 'REST API', 'Bootstrap 4']}
+            />
+          </div>
+        </div>
       </div >
     )
   }
