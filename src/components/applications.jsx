@@ -1,7 +1,7 @@
 import React from 'react'
 
 function AppCard(props) {
-  const { image, rotateCard, name, description, madeWith } = props
+  const { category, image, rotateCard, name, description, madeWith } = props
   const insertIntoArray = (arr, value) => {
     return arr.reduce((result, element, index, array) => {
       result.push(element);
@@ -18,8 +18,15 @@ function AppCard(props) {
     (<span key={index} className="pill">{element}</span>)
   )
 
+  let hidden = null
+  if (category === 'All') {
+    hidden = null
+  } else if (!madeWith.includes(category)) {
+    hidden = "d-none"
+  }
+
   return (
-    <div className="col app-container d-flex justify-content-center">
+    <div className={`app-container m-3 ${hidden}`}>
       <div className="app-card">
         <div className="card-front">
           <img className="app-image" src={`/images/${image}`} alt="art4bid app"></img>
@@ -55,48 +62,65 @@ function AppCard(props) {
 export default class Applications extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      category: 'All'
+    }
     this.rotateCard = this.rotateCard.bind(this);
+    this.filterCards = this.filterCards.bind(this)
+
   }
 
   rotateCard(event) {
     event.target.parentElement.parentElement.parentElement.classList.toggle('flip-card')
   }
 
+  filterCards(event) {
+    this.setState({
+      category: event.target.innerText
+    })
+    console.log(event.target.innerText)
+  }
+
   render() {
+    const { category } = this.state
+
     return (
       <div id="applications" className="section text-center d-flex flex-column">
         <h1>Applications</h1>
-        <div className="filter-container">
-          <button className="btn">All</button>
-          <button className="btn">React.js</button>
-          <button className="btn">Node.js</button>
-          <button className="btn">PostgreSQL</button>
+        <div className="filter-container mt-4" />
+        <button onClick={this.filterCards} className="btn">All</button>
+        <button onClick={this.filterCards} className="btn">React.js</button>
+        <button onClick={this.filterCards} className="btn">Node.js</button>
+        <button onClick={this.filterCards} className="btn">PostgreSQL</button>
+      </div>
+      <div className="container-fluid pt-2 pb-5">
+        <div className="d-flex flex-wrap justify-content-center">
+          <AppCard
+            category={category}
+            image="art4bid-app.png"
+            rotateCard={this.rotateCard}
+            name="ART4BID"
+            description="A full stack web application for artists who want to promote or sell their work through a social network bidding system"
+            madeWith={[`JavaScript (ES5/ES6)`, 'React.js', 'Node.js', 'HTML5', 'CSS3', 'PostgreSQL', 'Express', 'Bootstrap 4']}
+          />
+          <AppCard
+            category={category}
+            image="light-box-app-3.png"
+            rotateCard={this.rotateCard}
+            name="Light Box"
+            description="A full stack web application that allows users to shop, add desired products to a cart, and checkout items"
+            madeWith={[`JavaScript (ES5/ES6)`, 'React.js', 'Node.js', 'HTML5', 'CSS3', 'PostgreSQL', 'Express', 'Bootstrap 4']}
+          />
+          <AppCard
+            category={category}
+            image="movies-to-see-app.png"
+            rotateCard={this.rotateCard}
+            name="Movies To See"
+            description="A front end application where users can get New York Times review articles and YouTube video reviews for any movie"
+            madeWith={[`JavaScript (ES5/ES6)`, 'HTML5', 'CSS3', 'jQuery', 'AJAX', 'REST API', 'Bootstrap 4']}
+          />
         </div>
-        <div className="container-fluid p-5">
-          <div className="row">
-            <AppCard
-              image="art4bid-app.png"
-              rotateCard={this.rotateCard}
-              name="ART4BID"
-              description="A full stack web application for artists who want to promote or sell their work through a social network bidding system"
-              madeWith={[`JavaScript (ES5/ES6)`, 'React.js', 'Node.js', 'HTML5', 'CSS3', 'PostgreSQL', 'Express', 'Bootstrap 4']}
-            />
-            <AppCard
-              image="light-box-app-3.png"
-              rotateCard={this.rotateCard}
-              name="Light Box"
-              description="A full stack web application that allows users to shop, add desired products to a cart, and checkout items"
-              madeWith={[`JavaScript (ES5/ES6)`, 'React.js', 'Node.js', 'HTML5', 'CSS3', 'PostgreSQL', 'Express', 'Bootstrap 4']}
-            />
-            <AppCard
-              image="movies-to-see-app.png"
-              rotateCard={this.rotateCard}
-              name="Movies To See"
-              description="A front end application where users can get New York Times review articles and YouTube video reviews for any movie"
-              madeWith={[`JavaScript (ES5/ES6)`, 'HTML5', 'CSS3', 'jQuery', 'AJAX', 'REST API', 'Bootstrap 4']}
-            />
-          </div>
-        </div>
+      </div>
       </div >
     )
   }
