@@ -1,7 +1,7 @@
 import React from 'react'
 
 function AppCard(props) {
-  const { category, image, rotateCard, name, description, madeWith } = props
+  const { category, image, rotateCard, liveSite, gitHub, name, description, madeWith } = props
   const insertIntoArray = (arr, value) => {
     return arr.reduce((result, element, index, array) => {
       result.push(element);
@@ -29,13 +29,13 @@ function AppCard(props) {
     <div className={`app-container m-3 ${hidden}`}>
       <div className="app-card">
         <div className="card-front">
-          <img className="app-image" src={`/images/${image}`} alt="art4bid app"></img>
+          <img className="app-image mb-2" src={`/images/${image}`} alt="art4bid app"></img>
           <div className="buttons-container w-100 d-flex flex-wrap justify-content-between">
             <button
               onClick={props.rotateCard}
               className="more-info">More Info</button>
-            <button className="live-site"><i className="icon fas fa-external-link-alt mr-1"></i>Live Site</button>
-            <button className="github"><i className="icon fab fa-github mr-1"></i>GitHub</button>
+            <a href={liveSite} className="live-site"><i className="icon fas fa-external-link-alt mr-1"></i>Live Site</a>
+            <a href={gitHub} className="github"><i className="icon fab fa-github mr-1"></i>GitHub</a>
           </div>
         </div>
         <div className="card-back">
@@ -49,7 +49,7 @@ function AppCard(props) {
               {madeItems}
             </div>
           </div>
-          <div className="buttons-container">
+          <div className="buttons-container d-flex justify-content-center">
             <button
               onClick={rotateCard}
               className="go-back">Go Back</button>
@@ -89,10 +89,10 @@ export default class Applications extends React.Component {
       <div id="applications" className="section text-center d-flex flex-column">
         <h1>Applications</h1>
         <div className="filter-container mt-4">
-          <button onClick={this.filterCards} className="btn">All</button>
-          <button onClick={this.filterCards} className="btn">React.js</button>
-          <button onClick={this.filterCards} className="btn">Node.js</button>
-          <button onClick={this.filterCards} className="btn">PostgreSQL</button>
+          <button onClick={this.filterCards} className={`btn ${category === 'All' ? 'button-active' : 'null'}`}>All</button>
+          <button onClick={this.filterCards} className={`btn ${category === 'React.js' ? 'button-active' : 'null'}`}>React.js</button>
+          <button onClick={this.filterCards} className={`btn ${category === 'Node.js' ? 'button-active' : 'null'}`}>Node.js</button>
+          <button onClick={this.filterCards} className={`btn ${category === 'PostgreSQL' ? 'button-active' : 'null'}`}>PostgreSQL</button>
         </div>
         <div className="container-fluid pt-2 pb-5">
           <div className="d-flex flex-wrap justify-content-center">
@@ -100,6 +100,8 @@ export default class Applications extends React.Component {
               category={category}
               image="art4bid-app.png"
               rotateCard={this.rotateCard}
+              liveSite="https://art4bid.sarahchoung.com/"
+              gitHub="https://github.com/seongkevinlee/art4bid"
               name="ART4BID"
               description="A full stack web application for artists who want to promote or sell their work through a social network bidding system"
               madeWith={[`JavaScript (ES5/ES6)`, 'React.js', 'Node.js', 'HTML5', 'CSS3', 'PostgreSQL', 'Express', 'Bootstrap 4']}
@@ -108,6 +110,8 @@ export default class Applications extends React.Component {
               category={category}
               image="light-box-app-3.png"
               rotateCard={this.rotateCard}
+              liveSite="https://light-box.sarahchoung.com/"
+              gitHub="https://github.com/SarahChoung/light-box"
               name="Light Box"
               description="A full stack web application that allows users to shop, add desired products to a cart, and checkout items"
               madeWith={[`JavaScript (ES5/ES6)`, 'React.js', 'Node.js', 'HTML5', 'CSS3', 'PostgreSQL', 'Express', 'Bootstrap 4']}
@@ -116,6 +120,8 @@ export default class Applications extends React.Component {
               category={category}
               image="movies-to-see-app.png"
               rotateCard={this.rotateCard}
+              liveSite="https://movies-to-see.sarahchoung.com/"
+              gitHub="https://github.com/SarahChoung/movies-to-see"
               name="Movies To See"
               description="A front end application where users can get New York Times review articles and YouTube video reviews for any movie"
               madeWith={[`JavaScript (ES5/ES6)`, 'HTML5', 'CSS3', 'jQuery', 'AJAX', 'REST API', 'Bootstrap 4']}
