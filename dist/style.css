@@ -143,7 +143,7 @@ a:hover {
 
 .card-front {
   background-color: lightgray;
-  padding: 1%;
+  padding: 3px;
 }
 
 .card-back {
@@ -457,4 +457,8 @@ section img {
 
 .button-active {
   background-color: darkgrey;
+}
+
+.active-nav {
+  color: white;
 }
