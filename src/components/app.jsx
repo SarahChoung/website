@@ -79,26 +79,35 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <div ref={this.navBarRef}>
-          <NavBar visibleSection={this.state.visibleSection} />
+        <div className="#top" ref={this.navBarRef}>
+          <NavBar
+            visibleSection={this.state.visibleSection}
+            navBar={this.navBarRef.current}
+            home={this.homeRef.current}
+            about={this.aboutRef.current}
+            applications={this.applicationsRef.current}
+            skills={this.skillsRef.current}
+            tools={this.toolsRef.current}
+            contact={this.contactRef.current}
+          />
         </div>
-        <div ref={this.homeRef} className="home-background" >
+        <div ref={this.homeRef} className="home-background">
           <Home />
         </div>
-        <div ref={this.aboutRef}>
+        <div ref={this.aboutRef} id="about" >
           <About />
         </div>
-        <div ref={this.applicationsRef} >
+        <div ref={this.applicationsRef} id="applications"  >
           <Applications />
         </div>
         {/* <MoonLight /> */}
-        <div ref={this.skillsRef} >
+        <div ref={this.skillsRef} id="skills">
           <Skills />
         </div>
-        <div ref={this.toolsRef} >
+        <div ref={this.toolsRef} id="tools" >
           <Tools />
         </div>
-        <div ref={this.contactRef} >
+        <div ref={this.contactRef} id="contact">
           <Contact />
         </div>
       </div>

@@ -10,15 +10,12 @@ html {
 
 a {
   color: black;
+  transition: 0.25s;
 }
 
 a:hover {
   color: white;
   text-decoration: none;
-}
-
-li > a {
-  transition: 0.25s;
 }
 
 .section {
@@ -30,26 +27,24 @@ li > a {
   height: 90vh;
 }
 
-#home-description {
-  color: black;
-}
-
 .home-background {
-  background-image: url("/images/banner.png");
+  background-color: darkgray;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 #about,
 #skills,
 #contact {
-  /* background-color: lightslategray; */
+  background-color: lightslategray;
 }
 
 #header-placeholder {
   height: 10vh;
+  min-height: 75px;
 }
 
 #header-container {
@@ -59,6 +54,7 @@ li > a {
 .header {
   width: 90%;
   height: 10vh;
+  min-height: 75px;
 }
 
 .nav-links {
@@ -96,10 +92,11 @@ li > a {
 }
 
 #home-description {
-  font-size: 5rem;
-  top: 55%;
+  font-size: 3.25rem;
+  top: 47%;
   animation: description 2s;
   position: absolute;
+  color: black;
 }
 
 .app-container {
@@ -230,7 +227,10 @@ section img {
 */
 
 #logo {
-  animation: fill 0.5s ease forwards 2.5s;
+  animation: fill 0.5s ease forwards 2.5s, movelogo 3s 3s;
+  z-index: 1;
+  overflow: visible;
+  position: absolute;
 }
 
 /* S */
@@ -318,12 +318,6 @@ section img {
   animation: line-anim 2.5s ease forwards;
 }
 
-#logo {
-  overflow: visible;
-  position: absolute;
-  top: 33%;
-}
-
 @keyframes line-anim {
   to {
     stroke-dashoffset: 0;
@@ -335,18 +329,27 @@ section img {
     fill: transparent;
   }
   to {
-    fill: white;
+    fill: black;
   }
 }
 
 @keyframes description {
   from {
-    top: 40%;
+    top: 35%;
     opacity: 0;
   }
   to {
-    top: 55%;
+    top: 47%;
     opacity: 1;
+  }
+}
+
+@keyframes movelogo {
+  from {
+    top: 45%;
+  }
+  to {
+    top: 12%;
   }
 }
 
@@ -427,10 +430,12 @@ section img {
   width: 400px;
   height: 500px;
   object-fit: cover;
+  display: relative;
 }
 
 #home-description {
   border-right: 0.2rem solid black;
+  z-index: 1;
 }
 
 .filter-container > button {
@@ -495,4 +500,23 @@ section img {
 
 .nav-active {
   transform: translateX(0%);
+}
+
+.computer {
+  height: 80%;
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    bottom: -12%;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
 }

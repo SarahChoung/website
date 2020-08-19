@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Tools(props) {
   return (
-    <div id="tools" className="section text-center d-flex flex-column justify-content-center">
+    <div className="section text-center d-flex flex-column justify-content-center">
       <div className="mb-5">
         <h1>Tools</h1>
       </div>

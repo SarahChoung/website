@@ -28,7 +28,7 @@ export default class NavBar extends React.Component {
       toggle = 'toggle'
     }
     return (
-      <div className="#top">
+      <div>
         <div id="header-placeholder">&nbsp;</div>
         <nav id="header-container" className="fixed-top">
           <div className="header d-flex justify-content-between align-items-center m-auto p-2">

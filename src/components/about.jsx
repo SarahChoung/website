@@ -2,7 +2,7 @@ import React from 'react';
 import { Slide, Fade } from "react-awesome-reveal";
 export default function About(props) {
   return (
-    <div id="about" className="section text-center d-flex flex-column justify-content-center">
+    <div className="section text-center d-flex flex-column justify-content-center">
       <div className="pb-5">
         <h1>About Me</h1>
       </div>
@@ -26,21 +26,21 @@ export default function About(props) {
             </Slide>
             <Fade triggerOnce='true' direction='down'>
               <div className="d-flex justify-content-around w-75 m-auto">
-                <div className="icon-div">
-                  <a href="mailto: sarahjchoung@gmail.com"><i className="icon fa fa-lg fa-envelope"></i></a>
-                </div>
-                <div className="icon-div">
-                  <a href="tel:+17147320972"><i className="icon fa fa-lg fa-phone"></i></a>
-                </div>
-                <div className="icon-div">
-                  <a href="/images/resume.pdf"><i className="icon fa fa-lg fa-file"></i></a>
-                </div>
-                <div className="icon-div">
-                  <a href="https://github.com/SarahChoung"><i className="icon fab fa-lg fa-github"></i></a>
-                </div>
-                <div className="icon-div">
-                  <a href="https://www.linkedin.com/in/sarah-choung/"><i className="icon fab fa-lg fa-linkedin"></i></a>
-                </div>
+                <a href="mailto: sarahjchoung@gmail.com">
+                  <div className="icon-div"><i className="icon fa fa-lg fa-envelope"></i></div>
+                </a>
+                <a href="tel:+17147320972">
+                  <div className="icon-div"><i className="icon fa fa-lg fa-phone"></i></div>
+                </a>
+                <a href="/images/resume.pdf">
+                  <div className="icon-div"><i className="icon fa fa-lg fa-file"></i></div>
+                </a>
+                <a href="https://github.com/SarahChoung">
+                  <div className="icon-div"><i className="icon fab fa-lg fa-github"></i></div>
+                </a>
+                <a href="https://www.linkedin.com/in/sarah-choung/">
+                  <div className="icon-div"><i className="icon fab fa-lg fa-linkedin"></i></div>
+                </a>
               </div>
             </Fade>
           </div>

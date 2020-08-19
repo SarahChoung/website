@@ -5,7 +5,7 @@ export default function Skills(props) {
   let height = '100px'
 
   return (
-    <div id="skills" className="section text-center d-flex flex-column justify-content-center" >
+    <div className="section text-center d-flex flex-column justify-content-center" >
       <div className="mb-5">
         <h1>Skills</h1>
       </div>

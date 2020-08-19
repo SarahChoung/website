@@ -89,7 +89,7 @@ export default class Applications extends React.Component {
     const { category } = this.state
 
     return (
-      <div id="applications" className="section text-center d-flex flex-column">
+      <div className="section text-center d-flex flex-column">
         <h1>Applications</h1>
         <div className="filter-container mt-4">
           <button onClick={this.filterCards} className={`btn ${category === 'All' ? 'button-active' : 'null'}`}>All</button>
