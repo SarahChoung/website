@@ -17,6 +17,10 @@ a:hover {
   text-decoration: none;
 }
 
+li > a {
+  transition: 0.25s;
+}
+
 .section {
   /* height: 100vh; */
   padding: 20vh 0;
@@ -26,10 +30,22 @@ a:hover {
   height: 90vh;
 }
 
+#home-description {
+  color: black;
+}
+
+.home-background {
+  background-image: url("/images/banner.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 #about,
 #skills,
 #contact {
-  background-color: darkgrey;
+  /* background-color: lightslategray; */
 }
 
 #header-placeholder {
@@ -84,32 +100,6 @@ a:hover {
   top: 55%;
   animation: description 2s;
   position: absolute;
-}
-
-@media screen and (max-width: 992px) {
-  .nav-links {
-    position: absolute;
-    right: 0px;
-    height: 90vh;
-    top: 10vh;
-    background-color: lightblue;
-    flex-direction: column;
-    width: 30%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-  }
-
-  .burger {
-    display: block;
-  }
-
-  #home-description {
-    font-size: 2em;
-  }
-}
-
-.nav-active {
-  transform: translateX(0%);
 }
 
 .app-container {
@@ -345,7 +335,7 @@ section img {
     fill: transparent;
   }
   to {
-    fill: black;
+    fill: white;
   }
 }
 
@@ -461,4 +451,48 @@ section img {
 
 .active-nav {
   color: white;
+}
+
+@media screen and (max-width: 992px) {
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 90vh;
+    top: 10vh;
+    background-color: lightblue;
+    flex-direction: column;
+    width: 30%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  #home-description {
+    font-size: 2em;
+  }
+
+  .profile-pic {
+    border-radius: 50px;
+    width: 275px;
+    height: 350px;
+    object-fit: cover;
+  }
+
+  .app-card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    transition: transform 1s;
+    position: relative;
+    width: 100%;
+    transform-style: preserve-3d;
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
 }

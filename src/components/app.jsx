@@ -37,7 +37,9 @@ export default class App extends React.Component {
       { section: "Contact", ref: this.contactRef },
     ]
   }
-
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
   handleScroll() {
     const { height: navBarHeight } = this.getDimensions(this.navBarRef.current);
     const scrollPosition = window.scrollY + navBarHeight
@@ -80,7 +82,7 @@ export default class App extends React.Component {
         <div ref={this.navBarRef}>
           <NavBar visibleSection={this.state.visibleSection} />
         </div>
-        <div ref={this.homeRef} >
+        <div ref={this.homeRef} className="home-background" >
           <Home />
         </div>
         <div ref={this.aboutRef}>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Fade } from "react-awesome-reveal";
 
 function AppCard(props) {
   const { category, image, rotateCard, liveSite, gitHub, name, description, madeWith } = props
@@ -26,37 +27,39 @@ function AppCard(props) {
   }
 
   return (
-    <div className={`app-container m-3 ${hidden}`}>
-      <div className="app-card">
-        <div className="card-front">
-          <img className="app-image mb-2" src={`/images/${image}`} alt="art4bid app"></img>
-          <div className="buttons-container w-100 d-flex flex-wrap justify-content-between">
-            <button
-              onClick={props.rotateCard}
-              className="more-info">More Info</button>
-            <a href={liveSite} className="live-site"><i className="icon fas fa-external-link-alt mr-1"></i>Live Site</a>
-            <a href={gitHub} className="github"><i className="icon fab fa-github mr-1"></i>GitHub</a>
-          </div>
-        </div>
-        <div className="card-back">
-          <div className="app-description">
-            <h2 className="app-name">{name}</h2>
-            <p className="app-blurb text-left">{description}</p>
-          </div>
-          <div className="made-container">
-            <h6 className="text-light">Made With</h6>
-            <div className="w-100 d-flex flex-wrap pt-1">
-              {madeItems}
+    <Fade triggerOnce='true' direction='up'>
+      <div className={`app-container m-3 ${hidden}`}>
+        <div className="app-card">
+          <div className="card-front">
+            <img className="app-image mb-2" src={`/images/${image}`} alt="art4bid app"></img>
+            <div className="buttons-container w-100 d-flex flex-wrap justify-content-between">
+              <button
+                onClick={props.rotateCard}
+                className="more-info">More Info</button>
+              <a href={liveSite} className="live-site"><i className="icon fas fa-external-link-alt mr-1"></i>Live Site</a>
+              <a href={gitHub} className="github"><i className="icon fab fa-github mr-1"></i>GitHub</a>
             </div>
           </div>
-          <div className="buttons-container d-flex justify-content-center">
-            <button
-              onClick={rotateCard}
-              className="go-back">Go Back</button>
+          <div className="card-back">
+            <div className="app-description">
+              <h2 className="app-name">{name}</h2>
+              <p className="app-blurb text-left">{description}</p>
+            </div>
+            <div className="made-container">
+              <h6 className="text-light">Made With</h6>
+              <div className="w-100 d-flex flex-wrap pt-1">
+                {madeItems}
+              </div>
+            </div>
+            <div className="buttons-container d-flex justify-content-center">
+              <button
+                onClick={rotateCard}
+                className="go-back">Go Back</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Fade>
   )
 
 }
@@ -94,6 +97,7 @@ export default class Applications extends React.Component {
           <button onClick={this.filterCards} className={`btn ${category === 'Node.js' ? 'button-active' : 'null'}`}>Node.js</button>
           <button onClick={this.filterCards} className={`btn ${category === 'PostgreSQL' ? 'button-active' : 'null'}`}>PostgreSQL</button>
         </div>
+
         <div className="container-fluid pt-2 pb-5">
           <div className="d-flex flex-wrap justify-content-center">
             <AppCard
@@ -128,6 +132,7 @@ export default class Applications extends React.Component {
             />
           </div>
         </div>
+
       </div >
     )
   }
