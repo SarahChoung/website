@@ -4,15 +4,8 @@
   font-family: "Poppins", sans-serif;
 }
 
-#home {
-  background-image: url("/images/test.jpg");
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  background-attachment: fixed;
-}
-
+.nav-home-group,
+#skills,
 #contact {
   background-image: url("/images/test.jpg");
   width: 100%;
@@ -23,12 +16,7 @@
 }
 
 #skills {
-  background-image: url("/images/test.jpg");
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
   background-position: top;
-  background-attachment: fixed;
 }
 
 html {
@@ -75,14 +63,9 @@ a:hover {
   min-height: 75px;
 }
 
-#header-container {
-  background-color: #f3f3f4;
-}
-
 .header {
   width: 90%;
   height: 10vh;
-  min-height: 75px;
 }
 
 .nav-links {
@@ -440,10 +423,10 @@ a:hover {
     position: absolute;
     right: 0px;
     height: 90vh;
-    top: 1vh;
+    top: 10vh;
     background-color: #f3f3f4;
     flex-direction: column;
-    width: 30%;
+    width: 50%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
   }
@@ -453,7 +436,7 @@ a:hover {
   }
 
   #home-description {
-    font-size: 2em;
+    font-size: 1.75em;
   }
 
   .profile-pic {
@@ -472,6 +455,18 @@ a:hover {
     width: 300px;
     height: 300px;
     border-radius: 5px;
+  }
+  .app-name {
+    font-size: 1.5rem;
+  }
+
+  .app-blurb {
+    font-size: 0.75rem;
+  }
+
+  .pill {
+    padding: 0 1%;
+    font-size: 0.75rem;
   }
 }
 

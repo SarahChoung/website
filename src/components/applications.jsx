@@ -28,7 +28,7 @@ function AppCard(props) {
 
   return (
     <Fade triggerOnce='true' direction='up'>
-      <div className={`app-container m-2 ${hidden}`}>
+      <div className={`app-container m-sm-2 m-md-3 ${hidden}`}>
         <div className="app-card">
           <div className="card-front">
             <img className="app-image mb-2" src={`/images/${image}`} alt="art4bid app"></img>
@@ -51,7 +51,7 @@ function AppCard(props) {
                 {madeItems}
               </div>
             </div>
-            <div className="buttons-container d-flex justify-content-around">
+            <div className="buttons-container d-flex justify-content-center">
               <button
                 onClick={rotateCard}
                 className="go-back">Go Back</button>

@@ -12,7 +12,8 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       visibleSection: 'Home',
-      active: false
+      active: false,
+      headerBackground: 'transparent'
     }
     this.navBarRef = React.createRef()
     this.homeRef = React.createRef()
@@ -78,6 +79,12 @@ export default class App extends React.Component {
     } else if (selected && selected.section !== this.state.visibleSection) {
       this.setState({ visibleSection: selected.section });
     }
+
+    if (window.scrollY > navBarHeight) {
+      this.setState({ headerBackground: '#f3f3f4' })
+    } else {
+      this.setState({ headerBackground: 'transparent' })
+    }
   }
 
   getDimensions(ele) {
@@ -95,7 +102,7 @@ export default class App extends React.Component {
   }
 
   render() {
-    const { visibleSection } = this.state
+    const { visibleSection, headerBackground } = this.state
     let isActive = null;
     let toggle = null;
     if (this.state.active) {
@@ -105,31 +112,33 @@ export default class App extends React.Component {
 
     return (
       <div>
-        <div className="#top" ref={this.navBarRef}>
-          <div>
-            <div id="header-placeholder">&nbsp;</div>
-            <nav id="header-container" className="fixed-top">
-              <div className="header d-flex justify-content-between align-items-center m-auto p-2">
-                <a href="#top"><h2 className="m-0">SC</h2></a>
-                <ul className={`nav-links d-flex align-items-center justify-content-around m-0 ${isActive}`}>
-                  <li><span onClick={() => { this.toggleNav, this.scrollTo(this.homeRef.current) }} className={visibleSection === 'Home' ? 'active-nav' : 'null'}>Home</span></li>
-                  <li><span onClick={() => { this.toggleNav, this.scrollTo(this.aboutRef.current) }} className={visibleSection === 'About' ? 'active-nav' : 'null'}>About</span></li>
-                  <li><span onClick={() => { this.toggleNav, this.scrollTo(this.applicationsRef.current) }} className={visibleSection === 'Applications' ? 'active-nav' : 'null'}>Applications</span></li>
-                  <li><span onClick={() => { this.toggleNav, this.scrollTo(this.skillsRef.current) }} className={visibleSection === 'Skills' ? 'active-nav' : 'null'}>Skills</span></li>
-                  <li><span onClick={() => { this.toggleNav, this.scrollTo(this.toolsRef.current) }} className={visibleSection === 'Tools' ? 'active-nav' : 'null'}>Tools</span></li>
-                  <li><span onClick={() => { this.toggleNav, this.scrollTo(this.contactRef.current) }} className={visibleSection === 'Contact' ? 'active-nav' : 'null'}>Contact</span></li>
-                </ul>
-                <div className="burger" onClick={this.toggleNav} >
-                  <div className={`${toggle} line1`}></div>
-                  <div className={`${toggle} line2`}></div>
-                  <div className={`${toggle} line3`}></div>
+        <div className="nav-home-group">
+          <div className="#top" ref={this.navBarRef}>
+            <div>
+              <div id="header-placeholder">&nbsp;</div>
+              <nav id="header-container" className="fixed-top" style={{ backgroundColor: headerBackground, transition: '0.5s' }}>
+                <div className="header d-flex justify-content-between align-items-center m-auto p-2">
+                  <a href="#top"><h2 className="m-0">SC</h2></a>
+                  <ul className={`nav-links d-flex align-items-center justify-content-around m-0 ${isActive}`}>
+                    <li><span onClick={() => { this.toggleNav(), this.scrollTo(this.homeRef.current) }} className={visibleSection === 'Home' ? 'active-nav' : 'null'}>Home</span></li>
+                    <li><span onClick={() => { this.toggleNav(), this.scrollTo(this.aboutRef.current) }} className={visibleSection === 'About' ? 'active-nav' : 'null'}>About</span></li>
+                    <li><span onClick={() => { this.toggleNav(), this.scrollTo(this.applicationsRef.current) }} className={visibleSection === 'Applications' ? 'active-nav' : 'null'}>Applications</span></li>
+                    <li><span onClick={() => { this.toggleNav(), this.scrollTo(this.skillsRef.current) }} className={visibleSection === 'Skills' ? 'active-nav' : 'null'}>Skills</span></li>
+                    <li><span onClick={() => { this.toggleNav(), this.scrollTo(this.toolsRef.current) }} className={visibleSection === 'Tools' ? 'active-nav' : 'null'}>Tools</span></li>
+                    <li><span onClick={() => { this.toggleNav(), this.scrollTo(this.contactRef.current) }} className={visibleSection === 'Contact' ? 'active-nav' : 'null'}>Contact</span></li>
+                  </ul>
+                  <div className="burger" onClick={this.toggleNav} >
+                    <div className={`${toggle} line1`}></div>
+                    <div className={`${toggle} line2`}></div>
+                    <div className={`${toggle} line3`}></div>
+                  </div>
                 </div>
-              </div>
-            </nav>
-          </div >
-        </div>
-        <div ref={this.homeRef} className="home-background">
-          <Home />
+              </nav>
+            </div >
+          </div>
+          <div ref={this.homeRef} className="home-background">
+            <Home />
+          </div>
         </div>
         <div ref={this.aboutRef} id="about" >
           <About />
