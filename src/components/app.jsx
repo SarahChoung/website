@@ -1,7 +1,7 @@
 import React from 'react';
 import MoonLight from './moon-light';
 import Home from './home';
-import NavBar from './navbar';
+// import NavBar from './navbar';
 import About from './about';
 import Applications from './applications';
 import Skills from './skills';
@@ -12,7 +12,8 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      visibleSection: 'Home'
+      visibleSection: 'Home',
+      active: false
     }
     this.navBarRef = React.createRef()
     this.homeRef = React.createRef()
@@ -24,6 +25,8 @@ export default class App extends React.Component {
     this.getDimensions = this.getDimensions.bind(this)
     this.handleScroll = this.handleScroll.bind(this)
     this.sectionRefs
+    this.toggleNav = this.toggleNav.bind(this)
+    this.scrollTo = this.scrollTo.bind(this)
   }
 
   componentDidMount() {
@@ -40,6 +43,25 @@ export default class App extends React.Component {
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
   }
+
+  toggleNav(event) {
+    if (!this.state.active) {
+      this.setState({ active: true })
+    } else {
+      this.setState({ active: false })
+    }
+  }
+
+  scrollTo(element) {
+    const { height: navBarHeight } = this.getDimensions(this.navBarRef.current);
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+    const target = elementPosition - navBarHeight + 1
+    window.scrollTo({
+      top: target,
+      behavior: "smooth",
+    });
+  };
+
   handleScroll() {
     const { height: navBarHeight } = this.getDimensions(this.navBarRef.current);
     const scrollPosition = window.scrollY + navBarHeight
@@ -48,7 +70,7 @@ export default class App extends React.Component {
       const ele = ref.current;
       if (ele) {
         const { offsetBottom, offsetTop } = this.getDimensions(ele);
-        return scrollPosition > offsetTop && scrollPosition < offsetBottom;
+        return scrollPosition >= offsetTop && scrollPosition < offsetBottom;
       }
     });
 
@@ -56,10 +78,7 @@ export default class App extends React.Component {
       this.setState({ visibleSection: 'Contact' });
     } else if (selected && selected.section !== this.state.visibleSection) {
       this.setState({ visibleSection: selected.section });
-    } else if (!selected && this.state.visibleSection) {
-      this.setState({ visibleSection: 'Home' });
     }
-
   }
 
   getDimensions(ele) {
@@ -77,19 +96,39 @@ export default class App extends React.Component {
   }
 
   render() {
+    const { visibleSection } = this.state
+    let isActive = null;
+    let toggle = null;
+    if (this.state.active) {
+      isActive = 'nav-active'
+      toggle = 'toggle'
+    }
+
     return (
       <div>
         <div className="#top" ref={this.navBarRef}>
-          <NavBar
-            visibleSection={this.state.visibleSection}
-            navBar={this.navBarRef.current}
-            home={this.homeRef.current}
-            about={this.aboutRef.current}
-            applications={this.applicationsRef.current}
-            skills={this.skillsRef.current}
-            tools={this.toolsRef.current}
-            contact={this.contactRef.current}
-          />
+          <div>
+            <div id="header-placeholder">&nbsp;</div>
+            <nav id="header-container" className="fixed-top">
+              <div className="header d-flex justify-content-between align-items-center m-auto p-2">
+                <a href="#top"><h2 className="m-0">SC</h2></a>
+                <ul className={`nav-links d-flex align-items-center justify-content-around m-0 ${isActive}`}>
+                  <li><span onClick={() => { this.toggleNav, this.scrollTo(this.homeRef.current) }} className={visibleSection === 'Home' ? 'active-nav' : 'null'}>Home</span></li>
+                  <li><span onClick={() => { this.toggleNav, this.scrollTo(this.aboutRef.current) }} className={visibleSection === 'About' ? 'active-nav' : 'null'}>About</span></li>
+                  <li><span onClick={() => { this.toggleNav, this.scrollTo(this.applicationsRef.current) }} className={visibleSection === 'Applications' ? 'active-nav' : 'null'}>Applications</span></li>
+                  <li><span onClick={() => { this.toggleNav, this.scrollTo(this.skillsRef.current) }} className={visibleSection === 'Skills' ? 'active-nav' : 'null'}>Skills</span></li>
+                  <li><span onClick={() => { this.toggleNav, this.scrollTo(this.toolsRef.current) }} className={visibleSection === 'Tools' ? 'active-nav' : 'null'}>Tools</span></li>
+                  <li><span onClick={() => { this.toggleNav, this.scrollTo(this.contactRef.current) }} className={visibleSection === 'Contact' ? 'active-nav' : 'null'}>Contact</span></li>
+                </ul>
+                <div className="burger" onClick={this.toggleNav} >
+                  <div className={`${toggle} line1`}></div>
+                  <div className={`${toggle} line2`}></div>
+                  <div className={`${toggle} line3`}></div>
+                </div>
+              </div>
+            </nav>
+          </div >
+
         </div>
         <div ref={this.homeRef} className="home-background">
           <Home />
@@ -110,7 +149,7 @@ export default class App extends React.Component {
         <div ref={this.contactRef} id="contact">
           <Contact />
         </div>
-      </div>
+      </div >
     )
   }
 }

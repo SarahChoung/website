@@ -8,6 +8,10 @@ html {
   scroll-behavior: smooth;
 }
 
+li > span:hover {
+  cursor: pointer;
+}
+
 a {
   color: black;
   transition: 0.25s;
@@ -28,7 +32,7 @@ a:hover {
 }
 
 .home-background {
-  background-color: darkgray;
+  background-image: url("/images/clouds-mine.png");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -93,7 +97,7 @@ a:hover {
 
 #home-description {
   font-size: 3.25rem;
-  top: 47%;
+  top: 50%;
   animation: description 2s;
   position: absolute;
   color: black;
@@ -339,7 +343,7 @@ section img {
     opacity: 0;
   }
   to {
-    top: 47%;
+    top: 50%;
     opacity: 1;
   }
 }
@@ -503,10 +507,10 @@ section img {
 }
 
 .computer {
-  height: 80%;
+  height: 78%;
   max-width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: 1%;
   animation: fadeIn 2s;
 }
 
@@ -517,6 +521,6 @@ section img {
   }
   100% {
     opacity: 1;
-    bottom: 0;
+    bottom: 1%;
   }
 }

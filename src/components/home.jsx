@@ -8,7 +8,7 @@ export default class Home extends React.Component {
       text: 'Web Developer',
       isDeleting: false,
       loopNum: 0,
-      typingSpeed: 5000,
+      typingSpeed: 5500,
       border: 'black'
     }
     // this.S = React.createRef();
