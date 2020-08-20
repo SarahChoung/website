@@ -438,8 +438,8 @@ a:hover {
     position: absolute;
     right: 0px;
     height: 90vh;
-    top: 10vh;
-    background-color: lightblue;
+    top: 1vh;
+    background-color: #f3f3f4;
     flex-direction: column;
     width: 30%;
     transform: translateX(100%);
@@ -494,4 +494,9 @@ a:hover {
     opacity: 1;
     bottom: 1%;
   }
+}
+
+.about-row {
+  border: 1px solid #333741;
+  border-radius: 5px;
 }
