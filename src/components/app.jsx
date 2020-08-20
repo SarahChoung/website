@@ -1,7 +1,6 @@
 import React from 'react';
 import MoonLight from './moon-light';
 import Home from './home';
-// import NavBar from './navbar';
 import About from './about';
 import Applications from './applications';
 import Skills from './skills';
@@ -128,7 +127,6 @@ export default class App extends React.Component {
               </div>
             </nav>
           </div >
-
         </div>
         <div ref={this.homeRef} className="home-background">
           <Home />

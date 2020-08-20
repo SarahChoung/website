@@ -4,12 +4,52 @@
   font-family: "Poppins", sans-serif;
 }
 
+#home {
+  background-image: url("/images/test.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+#contact {
+  background-image: url("/images/test.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+#skills {
+  background-image: url("/images/test.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #f3f3f4;
+}
+
+li > span {
+  transition: 0.25s;
+}
+
 li > span:hover {
   cursor: pointer;
+  color: #de6262;
+}
+
+.active-nav {
+  color: #de6262;
 }
 
 a {
@@ -23,27 +63,11 @@ a:hover {
 }
 
 .section {
-  /* height: 100vh; */
-  padding: 20vh 0;
+  padding: 10vh 0;
 }
 
 #home {
   height: 90vh;
-}
-
-.home-background {
-  background-image: url("/images/clouds-mine.png");
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-#about,
-#skills,
-#contact {
-  background-color: lightslategray;
 }
 
 #header-placeholder {
@@ -52,7 +76,7 @@ a:hover {
 }
 
 #header-container {
-  background-color: lightblue;
+  background-color: #f3f3f4;
 }
 
 .header {
@@ -158,80 +182,35 @@ a:hover {
   margin: 1px;
 }
 
+.icon {
+  color: #333741;
+  transition: 0.5s;
+}
+
+.icon:hover {
+  color: white;
+}
+
 .icon-div {
-  background: lightblue;
+  border: 1px solid #333741;
   width: 50px;
   height: 50px;
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
   line-height: 50px;
   vertical-align: middle;
 }
 
-/* Moonlight Code */
-
-/* #moonlight-div {
-  height: 120vh;
-  background: #0a2a43;
+.icon-div:hover {
+  background-color: #333741;
 }
 
-section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.icon-div:hover .icon {
+  color: white;
 }
-
-section:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 150px;
-  background: linear-gradient(to top, #0a2a43, transparent);
-  z-index: 10000;
-}
-
-section:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #0a2a43;
-  z-index: 10000;
-  mix-blend-mode: color;
-}
-
-section img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none;
-}
-
-#text {
-  position: relative;
-  color: #fff;
-  font-size: 5em;
-  z-index: 1;
-}
-
-#road {
-  z-index: 2;
-}
-
-*/
 
 #logo {
-  animation: fill 0.5s ease forwards 2.5s, movelogo 3s 3s;
+  animation: fill 0.5s ease forwards 2.5s, movelogo 2.5s 3s;
   z-index: 1;
   overflow: visible;
   position: absolute;
@@ -450,16 +429,8 @@ section img {
   height: 35%;
 }
 
-.skill {
-  fill: pink;
-}
-
 .button-active {
   background-color: darkgrey;
-}
-
-.active-nav {
-  color: white;
 }
 
 @media screen and (max-width: 992px) {

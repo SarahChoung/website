@@ -36,8 +36,8 @@ function AppCard(props) {
               <button
                 onClick={props.rotateCard}
                 className="more-info">More Info</button>
-              <a href={liveSite} className="live-site"><i className="icon fas fa-external-link-alt mr-1"></i>Live Site</a>
-              <a href={gitHub} className="github"><i className="icon fab fa-github mr-1"></i>GitHub</a>
+              <a href={liveSite} className="live-site"><i className="fas fa-external-link-alt mr-1"></i>Live Site</a>
+              <a href={gitHub} className="github"><i className="fab fa-github mr-1"></i>GitHub</a>
             </div>
           </div>
           <div className="card-back">
