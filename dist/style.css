@@ -4,6 +4,41 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f3f3f4;
+}
+
+a {
+  color: black;
+  transition: 0.25s;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.more-info:hover,
+.live-site:hover,
+.github:hover,
+.go-back:hover,
+li > span:hover,
+.burger {
+  cursor: pointer;
+}
+/* Sections */
+.section {
+  padding: 10vh 0;
+}
+
+#home {
+  height: 90vh;
+}
+
 .nav-home-group,
 #skills,
 #contact {
@@ -19,20 +54,12 @@
   background-position: top;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: #f3f3f4;
-}
-
+/* NavBar */
 li > span {
   transition: 0.25s;
 }
 
 li > span:hover {
-  cursor: pointer;
   color: #de6262;
 }
 
@@ -40,27 +67,8 @@ li > span:hover {
   color: #de6262;
 }
 
-a {
-  color: black;
-  transition: 0.25s;
-}
-
-a:hover {
-  color: white;
-  text-decoration: none;
-}
-
-.section {
-  padding: 10vh 0;
-}
-
-#home {
-  height: 90vh;
-}
-
 #header-placeholder {
   height: 10vh;
-  min-height: 75px;
 }
 
 .header {
@@ -74,12 +82,10 @@ a:hover {
 
 .nav-links li {
   list-style: none;
-  color: black;
 }
 
 .burger {
   display: none;
-  cursor: pointer;
 }
 
 .burger div {
@@ -102,96 +108,7 @@ a:hover {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-#home-description {
-  font-size: 3.25rem;
-  top: 50%;
-  animation: description 2s;
-  position: absolute;
-  color: black;
-}
-
-.app-container {
-  perspective: 1000px;
-}
-
-.app-card {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-  transition: transform 1s;
-  position: relative;
-  width: 100%;
-  transform-style: preserve-3d;
-  width: 375px;
-  height: 375px;
-  border-radius: 5px;
-}
-
-.flip-card {
-  transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-  border-radius: 5px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-.card-front {
-  background-color: lightgray;
-  padding: 3px;
-}
-
-.card-back {
-  background-color: #333741;
-  transform: rotateY(180deg);
-  padding: 8%;
-}
-
-.app-image {
-  border-radius: 3px;
-  height: 85%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.app-description {
-  height: 50%;
-}
-
-.badge-class {
-  margin: 1px;
-}
-
-.icon {
-  color: #333741;
-  transition: 0.5s;
-}
-
-.icon:hover {
-  color: white;
-}
-
-.icon-div {
-  border: 1px solid #333741;
-  width: 50px;
-  height: 50px;
-  border-radius: 5px;
-  text-align: center;
-  line-height: 50px;
-  vertical-align: middle;
-}
-
-.icon-div:hover {
-  background-color: #333741;
-}
-
-.icon-div:hover .icon {
-  color: white;
-}
-
+/* Home */
 #logo {
   animation: fill 0.5s ease forwards 2.5s, movelogo 2.5s 3s;
   z-index: 1;
@@ -199,6 +116,24 @@ a:hover {
   position: absolute;
   height: 10%;
   max-width: 75%;
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: black;
+  }
+}
+
+@keyframes movelogo {
+  from {
+    top: 45%;
+  }
+  to {
+    top: 12%;
+  }
 }
 
 /* S */
@@ -292,13 +227,14 @@ a:hover {
   }
 }
 
-@keyframes fill {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: black;
-  }
+#home-description {
+  font-size: 3.25rem;
+  top: 50%;
+  animation: description 2s;
+  position: absolute;
+  color: black;
+  border-right: 0.2rem solid black;
+  z-index: 1;
 }
 
 @keyframes description {
@@ -312,20 +248,122 @@ a:hover {
   }
 }
 
-@keyframes movelogo {
-  from {
-    top: 45%;
+.computer {
+  height: 78%;
+  max-width: 100%;
+  position: absolute;
+  bottom: 1%;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    bottom: -12%;
   }
-  to {
-    top: 12%;
+  100% {
+    opacity: 1;
+    bottom: 1%;
   }
 }
 
-.more-info:hover,
-.live-site:hover,
-.github:hover,
-.go-back:hover {
-  cursor: pointer;
+/* About */
+
+.about-row {
+  border: 1px solid #333741;
+  border-radius: 5px;
+}
+
+.icon {
+  color: #333741;
+  transition: 0.5s;
+}
+
+.icon:hover {
+  color: white;
+}
+
+.icon-div {
+  border: 1px solid #333741;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  vertical-align: middle;
+}
+
+.icon-div:hover {
+  background-color: #333741;
+}
+
+.icon-div:hover .icon {
+  color: white;
+}
+
+.profile-pic {
+  border-radius: 50px;
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+  display: relative;
+}
+
+/* Applications */
+
+.app-container {
+  perspective: 1000px;
+}
+
+.app-card {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  transition: transform 1s;
+  position: relative;
+  width: 100%;
+  transform-style: preserve-3d;
+  width: 375px;
+  height: 375px;
+  border-radius: 5px;
+}
+
+.flip-card {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: lightgray;
+  padding: 3px;
+}
+
+.card-back {
+  background-color: #333741;
+  transform: rotateY(180deg);
+  padding: 8%;
+}
+
+.app-image {
+  border-radius: 3px;
+  height: 85%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.app-description {
+  height: 50%;
+}
+
+.badge-class {
+  margin: 1px;
 }
 
 .more-info,
@@ -393,19 +431,6 @@ a:hover {
   color: white;
 }
 
-.profile-pic {
-  border-radius: 50px;
-  width: 400px;
-  height: 500px;
-  object-fit: cover;
-  display: relative;
-}
-
-#home-description {
-  border-right: 0.2rem solid black;
-  z-index: 1;
-}
-
 .filter-container > button {
   margin-right: 5px;
 }
@@ -419,6 +444,10 @@ a:hover {
 }
 
 @media screen and (max-width: 992px) {
+  #header-container {
+    background-color: #f3f3f4 !important;
+  }
+
   .nav-links {
     position: absolute;
     right: 0px;
@@ -472,28 +501,4 @@ a:hover {
 
 .nav-active {
   transform: translateX(0%);
-}
-
-.computer {
-  height: 78%;
-  max-width: 100%;
-  position: absolute;
-  bottom: 1%;
-  animation: fadeIn 2s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    bottom: -12%;
-  }
-  100% {
-    opacity: 1;
-    bottom: 1%;
-  }
-}
-
-.about-row {
-  border: 1px solid #333741;
-  border-radius: 5px;
 }
