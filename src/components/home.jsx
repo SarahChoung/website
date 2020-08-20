@@ -76,7 +76,7 @@ export default class Home extends React.Component {
     const { description } = this.state
     let logoPosition;
     if (description === 'd-none') {
-      logoPosition = '45%'
+      logoPosition = '40%'
     } else {
       logoPosition = '12%'
     }

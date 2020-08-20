@@ -27,7 +27,8 @@ a:hover {
 .github:hover,
 .go-back:hover,
 li > span:hover,
-.burger {
+.burger,
+#sc {
   cursor: pointer;
 }
 /* Sections */
@@ -40,8 +41,8 @@ li > span:hover,
 }
 
 .nav-home-group,
-#skills,
-#contact {
+#contact,
+#skills {
   background-image: url("/images/test.jpg");
   width: 100%;
   background-repeat: no-repeat;
@@ -50,9 +51,14 @@ li > span:hover,
   background-attachment: fixed;
 }
 
-#skills {
-  background-position: top;
+/*
+#skills
+  background-color: #ddccba;
 }
+
+/* #tools {
+  background-color: #aebbc8;
+} */
 
 /* NavBar */
 li > span {
@@ -129,7 +135,7 @@ li > span:hover {
 
 @keyframes movelogo {
   from {
-    top: 45%;
+    top: 40%;
   }
   to {
     top: 12%;
@@ -269,7 +275,7 @@ li > span:hover {
 
 /* About */
 
-.about-row {
+.border-row {
   border: 1px solid #333741;
   border-radius: 5px;
 }
@@ -310,6 +316,10 @@ li > span:hover {
 }
 
 /* Applications */
+
+.filter-btn {
+  background-color: rgb(222, 222, 222);
+}
 
 .app-container {
   perspective: 1000px;
@@ -441,6 +451,11 @@ li > span:hover {
 
 .button-active {
   background-color: darkgrey;
+}
+
+/* Skills & Tools */
+.skill-name {
+  color: #333741;
 }
 
 @media screen and (max-width: 992px) {

@@ -118,7 +118,7 @@ export default class App extends React.Component {
               <div id="header-placeholder">&nbsp;</div>
               <nav id="header-container" className="fixed-top" style={{ backgroundColor: headerBackground, transition: '0.5s' }}>
                 <div className="header d-flex justify-content-between align-items-center m-auto p-2">
-                  <a href="#top"><h2 className="m-0">SC</h2></a>
+                  <span id="sc" onClick={() => { this.scrollTo(this.homeRef.current) }} ><h2 className="m-0">SC</h2></span>
                   <ul className={`nav-links d-flex align-items-center justify-content-around m-0 ${isActive}`}>
                     <li><span onClick={() => { this.toggleNav(), this.scrollTo(this.homeRef.current) }} className={visibleSection === 'Home' ? 'active-nav' : 'null'}>Home</span></li>
                     <li><span onClick={() => { this.toggleNav(), this.scrollTo(this.aboutRef.current) }} className={visibleSection === 'About' ? 'active-nav' : 'null'}>About</span></li>

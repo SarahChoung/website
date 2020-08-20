@@ -92,10 +92,10 @@ export default class Applications extends React.Component {
       <div className="section text-center d-flex flex-column">
         <h1>Applications</h1>
         <div className="filter-container mt-4">
-          <button onClick={this.filterCards} className={`btn ${category === 'All' ? 'button-active' : 'null'}`}>All</button>
-          <button onClick={this.filterCards} className={`btn ${category === 'React.js' ? 'button-active' : 'null'}`}>React.js</button>
-          <button onClick={this.filterCards} className={`btn ${category === 'Node.js' ? 'button-active' : 'null'}`}>Node.js</button>
-          <button onClick={this.filterCards} className={`btn ${category === 'PostgreSQL' ? 'button-active' : 'null'}`}>PostgreSQL</button>
+          <button onClick={this.filterCards} className={`btn filter-btn ${category === 'All' ? 'button-active' : 'null'}`}>All</button>
+          <button onClick={this.filterCards} className={`btn filter-btn ${category === 'React.js' ? 'button-active' : 'null'}`}>React.js</button>
+          <button onClick={this.filterCards} className={`btn filter-btn ${category === 'Node.js' ? 'button-active' : 'null'}`}>Node.js</button>
+          <button onClick={this.filterCards} className={`btn filter-btn ${category === 'PostgreSQL' ? 'button-active' : 'null'}`}>PostgreSQL</button>
         </div>
 
         <div className="container-fluid pt-2 pb-5">
