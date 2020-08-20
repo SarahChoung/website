@@ -7,7 +7,7 @@ export default function About(props) {
         <h1>About Me</h1>
       </div>
       <div className="container">
-        <div className="row p-5 about-row">
+        <div className="row p-4 about-row">
           <div className="col-12 col-lg-6 d-flex justify-content-center align-items-center">
             <Slide direction='left' triggerOnce='true'>
               <img className="profile-pic" src="/images/profile-photo.jpg" alt="profile picture"></img>

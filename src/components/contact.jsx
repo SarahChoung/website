@@ -8,7 +8,7 @@ export default class Contact extends React.Component {
         <div className="container p-3">
           <div className="row">
             <div className="col col-md-4  d-flex text-left align-items-center">
-              <div className="mr-2">
+              <div className="mr-2 ml-2">
                 <i className="icon fa-2x fa fa-map-marker-alt mr-1"></i>
               </div>
               <div className="pl-3" style={{ borderLeft: '1px solid black' }}>

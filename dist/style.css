@@ -214,6 +214,8 @@ a:hover {
   z-index: 1;
   overflow: visible;
   position: absolute;
+  height: 10%;
+  max-width: 75%;
 }
 
 /* S */
