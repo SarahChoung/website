@@ -464,6 +464,8 @@ li > span:hover {
   color: #333741;
 }
 
+/* Media Queries */
+
 @media screen and (max-width: 992px) {
   #header-container {
     background-color: #f3f3f4 !important;
@@ -514,6 +516,11 @@ li > span:hover {
     padding: 0 1%;
     font-size: 0.75rem;
   }
+
+  .contact-container {
+    width: 85%;
+    margin: auto;
+  }
 }
 
 .nav-active {
@@ -563,5 +570,11 @@ li > span:hover {
       opacity: 1;
       bottom: 5%;
     }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .contact-container {
+    width: 100%;
   }
 }

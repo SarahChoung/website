@@ -6,10 +6,10 @@ export default class Contact extends React.Component {
       <div>
         <div id="contact" className="section text-center d-flex flex-column justify-content-center">
           <h1>Contact</h1>
-          <div className="container p-3">
+          <div className="container p-3 mt-4 contact-container">
             <div className="row">
-              <div className="col col-lg-4  d-flex text-left align-items-center mb-2">
-                <div className="mr-2 ml-2">
+              <div className="col col-12 col-lg-4 d-flex text-left align-items-center mb-2">
+                <div className="mr-2 ml-3">
                   <i aria-hidden="true" className="fa-2x fa fa-map-marker-alt mr-1"></i>
                 </div>
                 <div className="pl-3" style={{ borderLeft: '1px solid black' }}>
@@ -17,8 +17,8 @@ export default class Contact extends React.Component {
                   <p>Orange County, CA</p>
                 </div>
               </div>
-              <div className="col col-lg-4 d-flex text-left align-items-center mb-2">
-                <div className="mr-2">
+              <div className="col col-12 col-lg-4 d-flex text-left align-items-center mb-2">
+                <div className="mx-2">
                   <a href="tel:+17147320972"><i className="icon fa-2x fa fa-phone mr-1"></i></a>
                 </div>
                 <div className="pl-3" style={{ borderLeft: '1px solid black' }}>
@@ -26,8 +26,8 @@ export default class Contact extends React.Component {
                   <a href="tel:+17147320972">&#40;714&#41; 732-0972</a>
                 </div>
               </div>
-              <div className="col col-lg-4 d-flex text-left align-items-center mb-2">
-                <div className="mr-2">
+              <div className="col col-12 col-lg-4 d-flex text-left align-items-center mb-2">
+                <div className="mx-2">
                   <a href="mailto: sarahjchoung@gmail.com"><i className="icon fa-2x fa fa-envelope mr-1"></i></a>
                 </div>
                 <div className="pl-3" style={{ borderLeft: '1px solid black' }}>
