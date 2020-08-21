@@ -484,10 +484,6 @@ li > span:hover {
     display: block;
   }
 
-  #home-description {
-    font-size: 1.45em;
-  }
-
   .profile-pic {
     border-radius: 50px;
     width: 275px;
@@ -523,7 +519,7 @@ li > span:hover {
   transform: translateX(0%);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .icon-div {
     border: 1px solid #333741;
     width: 40px;
@@ -546,5 +542,9 @@ li > span:hover {
   .app-container {
     perspective: 1000px;
     margin: 1rem 0.5rem;
+  }
+
+  #home-description {
+    font-size: 1.45em;
   }
 }
