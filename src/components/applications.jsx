@@ -112,7 +112,7 @@ export default class Applications extends React.Component {
             />
             <AppCard
               category={category}
-              image="light-box-app-3.png"
+              image="light-box-app.png"
               rotateCard={this.rotateCard}
               liveSite="https://light-box.sarahchoung.com/"
               gitHub="https://github.com/SarahChoung/light-box"

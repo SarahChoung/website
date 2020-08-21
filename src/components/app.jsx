@@ -1,5 +1,4 @@
 import React from 'react';
-import MoonLight from './moon-light';
 import Home from './home';
 import About from './about';
 import Applications from './applications';
@@ -127,7 +126,7 @@ export default class App extends React.Component {
                     <li><span onClick={() => { this.toggleNav(), this.scrollTo(this.toolsRef.current) }} className={visibleSection === 'Tools' ? 'active-nav' : 'null'}>Tools</span></li>
                     <li><span onClick={() => { this.toggleNav(), this.scrollTo(this.contactRef.current) }} className={visibleSection === 'Contact' ? 'active-nav' : 'null'}>Contact</span></li>
                   </ul>
-                  <div className="burger" onClick={this.toggleNav} >
+                  <div className="burger" onClick={this.toggleNav} aria-expanded={this.state.active.toString()} aria-controls="expandable">
                     <div className={`${toggle} line1`}></div>
                     <div className={`${toggle} line2`}></div>
                     <div className={`${toggle} line3`}></div>
