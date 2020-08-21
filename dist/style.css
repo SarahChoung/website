@@ -266,7 +266,7 @@ li > span:hover {
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    bottom: -12%;
+    bottom: 5%;
   }
   100% {
     opacity: 1;
@@ -547,5 +547,21 @@ li > span:hover {
 
   #home-description {
     font-size: 1.45em;
+  }
+
+  .computer {
+    bottom: 5%;
+    animation: fadeInPhone 2s;
+  }
+
+  @keyframes fadeInPhone {
+    0% {
+      opacity: 0;
+      bottom: 5%;
+    }
+    100% {
+      opacity: 1;
+      bottom: 5%;
+    }
   }
 }
