@@ -7,7 +7,7 @@ export default class Contact extends React.Component {
         <h1>Contact</h1>
         <div className="container p-3">
           <div className="row">
-            <div className="col col-md-4  d-flex text-left align-items-center">
+            <div className="col col-lg-4  d-flex text-left align-items-center mb-2">
               <div className="mr-2 ml-2">
                 <i className="fa-2x fa fa-map-marker-alt mr-1"></i>
               </div>
@@ -16,7 +16,7 @@ export default class Contact extends React.Component {
                 <p>Orange County, CA</p>
               </div>
             </div>
-            <div className="col col-md-4 d-flex text-left align-items-center">
+            <div className="col col-lg-4 d-flex text-left align-items-center mb-2">
               <div className="mr-2">
                 <a href="tel:+17147320972"><i className="icon fa-2x fa fa-phone mr-1"></i></a>
               </div>
@@ -25,7 +25,7 @@ export default class Contact extends React.Component {
                 <a href="tel:+17147320972">&#40;714&#41; 732-0972</a>
               </div>
             </div>
-            <div className="col col-md-4 d-flex text-left align-items-center">
+            <div className="col col-lg-4 d-flex text-left align-items-center mb-2">
               <div className="mr-2">
                 <a href="mailto: sarahjchoung@gmail.com"><i className="icon fa-2x fa fa-envelope mr-1"></i></a>
               </div>

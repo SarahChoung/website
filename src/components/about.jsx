@@ -6,7 +6,7 @@ export default function About(props) {
       <div className="pb-5">
         <h1>About Me</h1>
       </div>
-      <div className="container">
+      <div className="container about-container">
         <div className="row p-4 border-row">
           <div className="col-12 col-lg-6 d-flex justify-content-center align-items-center">
             <Slide direction='left' triggerOnce='true'>
@@ -25,7 +25,7 @@ export default function About(props) {
               Learning how to create front end and full stack applications has been an incredibly fun and educational journey. Bootcamp may have ended, but my drive to learn new technologies and methodologies has not, and I hope to have the opportunity to contribute my programming knowledge and experience to your team. </p>
             </Slide>
             <Fade triggerOnce='true' direction='down'>
-              <div className="d-flex justify-content-around w-75 m-auto">
+              <div className="about-btn-container d-flex justify-content-around m-auto">
                 <a href="mailto: sarahjchoung@gmail.com">
                   <div className="icon-div"><i className="icon fa fa-lg fa-envelope"></i></div>
                 </a>
