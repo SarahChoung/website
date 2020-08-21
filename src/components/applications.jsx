@@ -2,7 +2,7 @@ import React from 'react'
 import { Fade } from "react-awesome-reveal";
 
 function AppCard(props) {
-  const { category, image, rotateCard, liveSite, gitHub, name, description, madeWith } = props
+  const { image, rotateCard, liveSite, gitHub, name, description, madeWith } = props
   const insertIntoArray = (arr, value) => {
     return arr.reduce((result, element, index, array) => {
       result.push(element);
@@ -19,16 +19,9 @@ function AppCard(props) {
     (<span key={index} className="pill">{element}</span>)
   )
 
-  let hidden = null
-  if (category === 'All') {
-    hidden = null
-  } else if (!madeWith.includes(category)) {
-    hidden = "d-none"
-  }
-
   return (
     <Fade triggerOnce='true' direction='up'>
-      <div className={`app-container ${hidden}`}>
+      <div className="app-container">
         <div className="app-card">
           <div className="card-front">
             <img className="app-image mb-2" src={`/images/${image}`} alt="art4bid app"></img>
@@ -67,41 +60,20 @@ function AppCard(props) {
 export default class Applications extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      category: 'All'
-    }
     this.rotateCard = this.rotateCard.bind(this);
-    this.filterCards = this.filterCards.bind(this)
-
   }
 
   rotateCard(event) {
     event.target.parentElement.parentElement.parentElement.classList.toggle('flip-card')
   }
 
-  filterCards(event) {
-    this.setState({
-      category: event.target.innerText
-    })
-  }
-
   render() {
-    const { category } = this.state
-
     return (
       <div className="section text-center d-flex flex-column">
         <h1>Applications</h1>
-        <div className="filter-container mt-4">
-          <button onClick={this.filterCards} className={`btn filter-btn mb-1 ${category === 'All' ? 'button-active' : 'null'}`}>All</button>
-          <button onClick={this.filterCards} className={`btn filter-btn mb-1 ${category === 'React.js' ? 'button-active' : 'null'}`}>React.js</button>
-          <button onClick={this.filterCards} className={`btn filter-btn mb-1 ${category === 'Node.js' ? 'button-active' : 'null'}`}>Node.js</button>
-          <button onClick={this.filterCards} className={`btn filter-btn mb-1 ${category === 'PostgreSQL' ? 'button-active' : 'null'}`}>PostgreSQL</button>
-        </div>
-
-        <div className="container-fluid pt-2 pb-5">
+        <div className="container-fluid py-5">
           <div className="d-flex flex-wrap justify-content-center">
             <AppCard
-              category={category}
               image="art4bid-app.png"
               rotateCard={this.rotateCard}
               liveSite="https://art4bid.sarahchoung.com/"
@@ -111,7 +83,6 @@ export default class Applications extends React.Component {
               madeWith={[`JavaScript (ES5/ES6)`, 'React.js', 'Node.js', 'HTML5', 'CSS3', 'PostgreSQL', 'Express', 'Bootstrap 4']}
             />
             <AppCard
-              category={category}
               image="light-box-app.png"
               rotateCard={this.rotateCard}
               liveSite="https://light-box.sarahchoung.com/"
@@ -121,7 +92,6 @@ export default class Applications extends React.Component {
               madeWith={[`JavaScript (ES5/ES6)`, 'React.js', 'Node.js', 'HTML5', 'CSS3', 'PostgreSQL', 'Express', 'Bootstrap 4']}
             />
             <AppCard
-              category={category}
               image="movies-to-see-app.png"
               rotateCard={this.rotateCard}
               liveSite="https://movies-to-see.sarahchoung.com/"
