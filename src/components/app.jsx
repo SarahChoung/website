@@ -5,6 +5,9 @@ import Applications from './applications';
 import Skills from './skills';
 import Tools from './tools';
 import Contact from './contact'
+import smoothscroll from 'smoothscroll-polyfill';
+
+smoothscroll.polyfill();
 
 export default class App extends React.Component {
   constructor(props) {
@@ -54,7 +57,10 @@ export default class App extends React.Component {
   scrollTo(element) {
     const { height: navBarHeight } = this.getDimensions(this.navBarRef.current);
     const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
-    const target = elementPosition - navBarHeight + 1
+    let target = elementPosition - navBarHeight + 2
+    if (element === this.homeRef.current) {
+      target = 0
+    }
     window.scrollTo({
       top: target,
       behavior: "smooth",
