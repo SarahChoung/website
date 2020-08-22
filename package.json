@@ -31,6 +31,7 @@
     "react": "^16.13.1",
     "react-awesome-reveal": "^3.0.0",
     "react-dom": "^16.13.1",
-    "react-spring": "^8.0.27"
+    "react-spring": "^8.0.27",
+    "smoothscroll-polyfill": "^0.4.4"
   }
 }

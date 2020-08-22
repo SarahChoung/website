@@ -5,6 +5,9 @@ import Applications from './applications';
 import Skills from './skills';
 import Tools from './tools';
 import Contact from './contact'
+import smoothscroll from 'smoothscroll-polyfill';
+
+smoothscroll.polyfill();
 
 export default class App extends React.Component {
   constructor(props) {
@@ -59,7 +62,7 @@ export default class App extends React.Component {
       top: target,
       behavior: "smooth",
     });
-  };
+  }
 
   handleScroll() {
     const { height: navBarHeight } = this.getDimensions(this.navBarRef.current);

@@ -4,10 +4,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body,
 .copyright {
   background-color: #f3f3f4;
