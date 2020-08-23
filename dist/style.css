@@ -113,7 +113,7 @@ li > span:hover {
 
 /* Home */
 #logo {
-  animation: fill 0.5s ease forwards 2.5s, movelogo 2.5s 3s;
+  animation: fill 0.5s ease forwards 3s, movelogo 2.5s 4s;
   z-index: 1;
   overflow: visible;
   position: absolute;
@@ -143,7 +143,7 @@ li > span:hover {
 #logo path:nth-child(1) {
   stroke-dasharray: 493.9128112792969px;
   stroke-dashoffset: 493.9128112792969px;
-  animation: line-anim 2s ease forwards;
+  animation: line-anim 2s ease forwards 0.75s;
 }
 
 /* A */
@@ -151,7 +151,7 @@ li > span:hover {
   stroke-dasharray: 490.29266357421875px;
   stroke-dashoffset: 490.29266357421875px;
   stroke-linecap: round;
-  animation: line-anim 2s ease forwards 0.2s;
+  animation: line-anim 2s ease forwards 0.9s;
 }
 
 /* R */
@@ -159,7 +159,7 @@ li > span:hover {
   stroke-dasharray: 549.06689453125px;
   stroke-dashoffset: 549.06689453125px;
   stroke-linecap: round;
-  animation: line-anim 2s ease forwards 0.4s;
+  animation: line-anim 2s ease forwards 1.2s;
 }
 
 /* A */
@@ -167,7 +167,7 @@ li > span:hover {
   stroke-dasharray: 490.29266357421875px;
   stroke-dashoffset: 490.29266357421875px;
   stroke-linecap: round;
-  animation: line-anim 2s ease forwards 0.6s;
+  animation: line-anim 2s ease forwards 0.9s;
 }
 
 /* H */
@@ -175,14 +175,14 @@ li > span:hover {
   stroke-dasharray: 534.5280151367188px;
   stroke-dashoffset: 534.5280151367188px;
   stroke-linecap: square;
-  animation: line-anim 2s ease forwards 0.2s;
+  animation: line-anim 2s ease forwards 0.75s;
 }
 
 /* C */
 #logo path:nth-child(6) {
   stroke-dasharray: 508.5523986816406px;
   stroke-dashoffset: 508.5523986816406px;
-  animation: line-anim 2s ease forwards;
+  animation: line-anim 2s ease forwards 0.9s;
 }
 
 /* H */
@@ -190,14 +190,14 @@ li > span:hover {
   stroke-dasharray: 534.5280151367188px;
   stroke-dashoffset: 534.5280151367188px;
   stroke-linecap: square;
-  animation: line-anim 2s ease forwards 0.2s;
+  animation: line-anim 2s ease forwards 0.7s;
 }
 
 /* O */
 #logo path:nth-child(8) {
   stroke-dasharray: 565.9515380859375px;
   stroke-dashoffset: 565.9515380859375px;
-  animation: line-anim 2s ease forwards 0.4s;
+  animation: line-anim 2s ease forwards 0.9s;
 }
 
 /* U */
@@ -205,7 +205,7 @@ li > span:hover {
   stroke-dasharray: 483.89300537109375px;
   stroke-dashoffset: 483.89300537109375px;
   stroke-linecap: square;
-  animation: line-anim 2s ease forwards 0.4s;
+  animation: line-anim 2s ease forwards 1s;
 }
 
 /* N */
@@ -213,7 +213,7 @@ li > span:hover {
   stroke-dasharray: 604.4927978515625px;
   stroke-dashoffset: 604.4927978515625px;
   stroke-linecap: square;
-  animation: line-anim 2s ease forwards 0.2s;
+  animation: line-anim 2s ease forwards 0.75s;
 }
 
 /* G */
@@ -221,7 +221,7 @@ li > span:hover {
   stroke-dasharray: 635.7110595703125px;
   stroke-dashoffset: 635.7110595703125px;
   stroke-linecap: round;
-  animation: line-anim 2.5s ease forwards;
+  animation: line-anim 2.5s ease forwards 0.65s;
 }
 
 @keyframes line-anim {

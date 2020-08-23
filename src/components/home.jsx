@@ -8,18 +8,9 @@ export default class Home extends React.Component {
       text: 'Web Developer',
       isDeleting: false,
       loopNum: 0,
-      typingSpeed: 5500,
+      typingSpeed: 6500,
       border: 'black'
     }
-    // this.S = React.createRef();
-    // this.A = React.createRef();
-    // this.R = React.createRef();
-    // this.H = React.createRef();
-    // this.C = React.createRef();
-    // this.O = React.createRef();
-    // this.U = React.createRef();
-    // this.N = React.createRef();
-    // this.G = React.createRef();
     this.words = ['Web Developer', 'Problem Solver', 'Always Learning'];
     this.showDescription = this.showDescription.bind(this);
     this.type = this.type.bind(this)
@@ -54,20 +45,11 @@ export default class Home extends React.Component {
   showDescription() {
     setTimeout(() => {
       this.setState({ description: 'null' })
-    }, 3500)
+    }, 4500)
   }
 
 
   componentDidMount() {
-    // console.log("S", this.S.current.getTotalLength())
-    // console.log("A", this.A.current.getTotalLength())
-    // console.log("R", this.R.current.getTotalLength())
-    // console.log("H", this.H.current.getTotalLength())
-    // console.log("C", this.C.current.getTotalLength())
-    // console.log("O", this.O.current.getTotalLength())
-    // console.log("U", this.U.current.getTotalLength())
-    // console.log("N", this.N.current.getTotalLength())
-    // console.log("G", this.G.current.getTotalLength())
     this.showDescription()
     this.type()
   }
