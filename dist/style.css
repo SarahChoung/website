@@ -28,6 +28,7 @@ li > span:hover,
 #sc {
   cursor: pointer;
 }
+
 /* Sections */
 .section {
   padding: 10vh 0;
@@ -47,15 +48,6 @@ li > span:hover,
   background-position: bottom;
   background-attachment: fixed;
 }
-
-/*
-#skills
-  background-color: #ddccba;
-}
-
-/* #tools {
-  background-color: #aebbc8;
-} */
 
 /* NavBar */
 li > span {
