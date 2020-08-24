@@ -2,7 +2,7 @@ import React from 'react'
 import { Fade } from "react-awesome-reveal";
 
 function AppCard(props) {
-  const { image, rotateCard, liveSite, gitHub, name, description, madeWith } = props
+  const { image, rotateCard, liveSite, gitHub, name, description, madeWith, altText } = props
   const insertIntoArray = (arr, value) => {
     return arr.reduce((result, element, index, array) => {
       result.push(element);
@@ -24,7 +24,7 @@ function AppCard(props) {
       <div className="app-container">
         <div className="app-card">
           <div className="card-front">
-            <img className="app-image mb-2" src={`/images/${image}`} alt="art4bid app"></img>
+            <img className="app-image mb-2" src={`/images/${image}`} alt={altText}></img>
             <div className="buttons-container w-100 d-flex flex-wrap justify-content-between">
               <button
                 onClick={props.rotateCard}
@@ -75,6 +75,7 @@ export default class Applications extends React.Component {
           <div className="d-flex flex-wrap justify-content-center">
             <AppCard
               image="art4bid-app.png"
+              altText="Art4Bid Logo"
               rotateCard={this.rotateCard}
               liveSite="https://art4bid.sarahchoung.com/"
               gitHub="https://github.com/seongkevinlee/art4bid"
@@ -84,6 +85,7 @@ export default class Applications extends React.Component {
             />
             <AppCard
               image="light-box-app.png"
+              altText="Light Box Logo"
               rotateCard={this.rotateCard}
               liveSite="https://light-box.sarahchoung.com/"
               gitHub="https://github.com/SarahChoung/light-box"
@@ -93,6 +95,7 @@ export default class Applications extends React.Component {
             />
             <AppCard
               image="movies-to-see-app.png"
+              altText="Movies To See Logo"
               rotateCard={this.rotateCard}
               liveSite="https://movies-to-see.sarahchoung.com/"
               gitHub="https://github.com/SarahChoung/movies-to-see"

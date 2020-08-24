@@ -32,7 +32,7 @@ export default function About(props) {
                 <a href="tel:+17147320972">
                   <div className="icon-div"><i className="icon fa fa-lg fa-phone"></i></div>
                 </a>
-                <a href="/images/resume.pdf">
+                <a href="images/Sarah_Choung_Resume.pdf">
                   <div className="icon-div"><i className="icon fa fa-lg fa-file"></i></div>
                 </a>
                 <a href="https://github.com/SarahChoung">
