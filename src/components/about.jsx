@@ -32,13 +32,13 @@ export default function About(props) {
                 <a href="tel:+17147320972">
                   <div className="icon-div"><i className="icon fa fa-lg fa-phone"></i></div>
                 </a>
-                <a href="images/Sarah_Choung_Resume.pdf">
+                <a href="images/Sarah_Choung_Resume.pdf" rel="noreferrer" target="_blank">
                   <div className="icon-div"><i className="icon fa fa-lg fa-file"></i></div>
                 </a>
-                <a href="https://github.com/SarahChoung">
+                <a href="https://github.com/SarahChoung" rel="noreferrer" target="_blank">
                   <div className="icon-div"><i className="icon fab fa-lg fa-github"></i></div>
                 </a>
-                <a href="https://www.linkedin.com/in/sarah-choung/">
+                <a href="https://www.linkedin.com/in/sarah-choung/" rel="noreferrer" target="_blank">
                   <div className="icon-div"><i className="icon fab fa-lg fa-linkedin"></i></div>
                 </a>
               </div>
