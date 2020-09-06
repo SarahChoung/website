@@ -103,6 +103,16 @@ export default class Applications extends React.Component {
               description="A front end application where users can get New York Times review articles and YouTube video reviews for any movie"
               madeWith={[`JavaScript (ES5/ES6)`, 'HTML5', 'CSS3', 'jQuery', 'AJAX', 'REST API', 'Bootstrap 4']}
             />
+            <AppCard
+              image="badass-kanban.png"
+              altText="BadASS Kanban Logo"
+              rotateCard={this.rotateCard}
+              liveSite="https://badass-kanban.adambotma.com/"
+              gitHub="https://github.com/adam-botma/hackathon-badass"
+              name="BadASS Kanban"
+              description="A front end web application for users to track their progress on tasks for a project (and enjoy the completion of each task)."
+              madeWith={[`JavaScript (ES5/ES6)`, 'React.js', 'HTML5', 'CSS3', 'Material-UI']}
+            />
           </div>
         </div>
 
