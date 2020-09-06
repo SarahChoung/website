@@ -110,7 +110,7 @@ export default class Applications extends React.Component {
               liveSite="https://badass-kanban.adambotma.com/"
               gitHub="https://github.com/adam-botma/hackathon-badass"
               name="BadASS Kanban"
-              description="A front end web application for users to track their progress on tasks for a project (and enjoy the completion of each task)."
+              description="A front end web application for users to track their progress on project tasks and enjoy the completion of each task. A weekend hackathon project."
               madeWith={[`JavaScript (ES5/ES6)`, 'React.js', 'HTML5', 'CSS3', 'Material-UI']}
             />
           </div>
