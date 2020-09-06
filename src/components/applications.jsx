@@ -104,7 +104,7 @@ export default class Applications extends React.Component {
               madeWith={[`JavaScript (ES5/ES6)`, 'HTML5', 'CSS3', 'jQuery', 'AJAX', 'REST API', 'Bootstrap 4']}
             />
             <AppCard
-              image="badass-kanban-2.png"
+              image="badass-kanban.png"
               altText="BadASS Kanban Logo"
               rotateCard={this.rotateCard}
               liveSite="https://badass-kanban.adambotma.com/"
