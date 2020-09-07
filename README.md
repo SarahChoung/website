@@ -1,2 +1,2 @@
 ## Website
-A website created using React.js, JS, HTML, and CSS.
+A website created using React.js, HTML, CSS, and Bootstrap 4.
