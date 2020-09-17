@@ -107,7 +107,7 @@ export default class Applications extends React.Component {
               image="badass-kanban.png"
               altText="BadASS Kanban Logo"
               rotateCard={this.rotateCard}
-              liveSite="https://badass-kanban.adambotma.com/"
+              liveSite="https://badass-kanban.sarahchoung.com/"
               gitHub="https://github.com/adam-botma/hackathon-badass"
               name="BadASS Kanban"
               description="A front end web application for users to track their progress on project tasks and enjoy the completion of each task. A weekend hackathon project."
